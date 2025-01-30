@@ -20,11 +20,14 @@ extract_text() {
             -e 's/\\22[4|3]/"/g' \
             -e 's/\\260/°/g' \
             -e 's/\\340/à/g' \
+            -e 's/\\350/è/g' \
             -e 's/\\351/é/g' | \
-        sed -Ee 's/\(([^)]+)\)Tj/\n{{ \1 }}\n/g' \
-            -e 's/\[\(([^)]+)\)\]TJ/\n{{ \1 }}\n/g' | \
+        sed -Ee 's/\)Tj/_/g' -e 's/\)\]TJ/__/g' | \
+        sed -Ee 's/\(([^]+)_/\n{{ \1 }}\n/g' \
+            -e 's/\[\(([^]+)__/\n{{ \1 }}\n/g' | \
         grep -e '^{{.*}}$' | \
         sed -Ee 's/^\{\{ *(.*) +\}\}$/\1/' \
+            -e 's/\\(\(|\))/\1/g' \
         > build/cleaned.txt
 
     agres="$(sed -n -Ee 's/^(SOL|ARÇONS|ANNEAUX|BARRES PARALLELES|BARRE FIXE).*$/\1/p' < build/cleaned.txt)"
@@ -191,8 +194,9 @@ extract_image() {
 
     e_id=$(echo "$ELEMENT" | jq -r '.id')
     agres=$(echo "$ELEMENT" | jq -r '.agres')
+    echo "$agres - $e_id"
     mkdir -p "out/sym/$agres/" "out/drawings/$agres/"
-    cell_ix=$(( e_id % 12 ))
+    cell_ix=$(( (e_id - 1) % 12 + 1 ))
     cell_bbox="$(sed "$cell_ix"'q;d' < "$CELL_FILE")"
 
     cell_ids="$(\
@@ -215,8 +219,16 @@ extract_image() {
 }
 
 
-for PAGE in $(seq 29 29); do
+for PAGE in $(seq 30 30); do
+    # set -x
+    # extract_image '{"agres": "SOL", "group": "saut, tour ou cercle", "id": 139, "description": "Cercle des jambes serrées ou écartées (540° ou +)", "value": 0.4}' \
+    #     build/bboxes.txt \
+    #     build/cells.txt \
+    #     build/final.svg
+    # break
+    echo "PAGE $PAGE"
     FULL_EPS=$(extract_page "$PAGE")
     ELEMENTS_LIST=$(extract_text)
+    cp "$ELEMENTS_LIST" "$(printf 'out/%03d.jsonl' "$PAGE")"
     extract_images "$FULL_EPS" "$ELEMENTS_LIST"
 done
