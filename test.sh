@@ -122,13 +122,16 @@ extract_image() {
 
     inkscape --query-all build/cell.svg > build/cell_bbox.txt
     apparel_color="$(echo "$apparel_colors" | grep "$agres" | cut -d, -f2)"
+
+    padded_id="$(printf "%03d" "$e_id")"
+
     sym_container_id=$(grep -A2 -Ee 'style=.*fill:'"$apparel_color" < build/cell.svg | grep 'id=' | sed -Ee 's/.*id="([^"]+)".*/\1/')
     sym_container_bbox=$(grep "$sym_container_id" < build/cell_bbox.txt | awk -F, '{print $2 "," $3 "," $2 + $4 "," $3 + $5}')
     sym_ids="$(contained_bboxes "$sym_container_bbox" < build/cell_bbox.txt | cut -d, -f1 | grep -v "$sym_container_id"| tr '\n' ',' | sed 's/,$//')"
-    crop_svg "$sym_ids" build/cell.svg "out/sym/$agres/$e_id.svg"
+    crop_svg "$sym_ids" build/cell.svg "out/sym/$agres/$padded_id.svg"
 
     value_ids="$(intersecting_bboxes "$sym_container_bbox" < build/cell_bbox.txt | cut -d, -f1 | grep -v 'svg1' | tr '\n' ',' | sed 's/,$//')"
-    crop_svg "$value_ids" build/cell.svg "out/drawings/$agres/$e_id.svg" -invert=true
+    crop_svg "$value_ids" build/cell.svg "out/drawings/$agres/$padded_id.svg" -invert=true
 }
 
 
