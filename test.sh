@@ -4,10 +4,10 @@ set -eu
 . ./utils.sh
 
 apparel_colors="SOL,#fccf6e
-ARÇONS,#fff102
-ANNEAUX,#ca006c
-BARRES PARALLÈLES,#5bc2a5
-BARRE FIXE,#009bc9"
+ARÇONS,#fff766
+ANNEAUX,#df5e9d
+BARRES PARALLÈLES,#a2debe
+BARRE FIXE,#5fbfdc"
 
 extract_page() {
     local PAGE="$1"
@@ -54,11 +54,12 @@ extract_text() {
     agres="$(sed -n -Ee 's/^('"$apparels"').*$/\1/p' < build/cleaned.txt)"
     group="$(grep -A1 "$agres" < build/cleaned.txt | tail -n1 | sed -Ee 's/"/\\"/g' -e 's/ [0-9]+$//')"
 
-    grep -A5 -Ee '^[0-9]+ +- ' < build/cleaned.txt | \
+    grep -A5 -Ee '^[0-9]+ *- *' < build/cleaned.txt | \
+        sed -Ee '/^--$/d' | \
         tr '\n' ' ' | \
-        sed -Ee 's/ ?([0-9]+ +- )/\n\1/g' \
+        sed -Ee 's/ ?([0-9]+ *- *)/\n\1 /g' \
             -e 's/( ?[0-9]+,[0-9]+ ?)+//' | \
-        sed '/^$/d' | \
+        sed -Ee '/^$/d' -e 's/  +/ /g' | \
         sort -n > build/description.txt
 
     grep -Ee '^[0-9],[0-9]$' < build/cleaned.txt | \
@@ -68,7 +69,7 @@ extract_text() {
     local ELEMENTS_LIST="build/elements.jsonl"
     paste --delimiters '' build/description.txt build/value.txt | \
         sed -Ee 's/"/\\"/g' | \
-        sed -Ee 's/^([0-9]+) +- ([^]+)(.*)$/{"agres": "'"$agres"'", "group": "'"$group"'", "id": \1, "description": "\2", "value": \3}/' > "$ELEMENTS_LIST"
+        sed -Ee 's/^([0-9]+) - ([^]+)(.*)$/{"agres": "'"$agres"'", "group": "'"$group"'", "id": \1, "description": "\2", "value": \3}/' > "$ELEMENTS_LIST"
     echo "$ELEMENTS_LIST"
 }
 
@@ -85,12 +86,15 @@ extract_images() {
         build/image.eps
     inkscape --vacuum-defs -o build/final.svg build/applied.svg
 
+    # Get bounding boxes of all objects
     inkscape --query-all build/final.svg > build/bboxes.txt
+
+    get_page_grid grid.txt build/bboxes.txt > build/page_grid.txt
 
     # Iterate over the elements and extract images
     while IFS="" read -r p || [ -n "$p" ]
     do
-        extract_image "$p" build/bboxes.txt "grid.txt" build/final.svg
+        extract_image "$p" build/bboxes.txt build/page_grid.txt build/final.svg
     done < "$ELEMENTS_LIST"
 }
 
@@ -128,11 +132,12 @@ extract_image() {
 }
 
 
-for PAGE in $(seq 89 92); do
+#for PAGE in $(seq 28 92); do
+for PAGE in $(seq 80 92); do
     # set -x
-    # extract_image '{"agres": "SOL", "group": "saut, tour ou cercle", "id": 139, "description": "Cercle des jambes serrées ou écartées (540° ou +)", "value": 0.4}' \
+    # extract_image '{"agres": "ANNEAUX", "group": "établissement à lappui en élan ou en force", "id": 10, "description": "Bascule dorsale bras échis à lappui", "value": 0.4}' \
     #     build/bboxes.txt \
-    #     build/cells.txt \
+    #     build/page_grid.txt \
     #     build/final.svg
     # break
     echo "PAGE $PAGE"

@@ -1,4 +1,6 @@
 #! /usr/bin/env bash
+
+# Deprecated
 identify_grid() {
     local BBOXES="$1"
 
@@ -49,6 +51,56 @@ identify_grid() {
 
     echo "$CELL_FILE"
 }
+
+# Merge multiple cells into a set of same cells
+merge_cells () {
+    sed '/^$/d' | awk -F, '
+NR==1 {x1=$1; y1=$2; x2=$3; y2=$4}
+{
+    x1 = (x1 < $1) ? x1 : $1
+    y1 = (y1 < $2) ? y1 : $2
+    x2 = (x2 < $3) ? $3 : x2
+    y2 = (y2 < $4) ? $4 : y2
+}
+END {for (i=0; i < NR; i++) {print x1 "," y1 "," x2 "," y2}}
+'
+}
+
+# From a generic grid of cells, generate a grid with merged cells according to the page bboxes
+get_page_grid() {
+    local generic_grid_file="$1"
+    local page_bboxes_file="$2"
+
+    # Find actual vertical separators
+    separators_v="$(grep -Ee '^[^,]+,(379|380|739|740).[0-9]*,[^,]+,1.33[0-9]*,.*' "$page_bboxes_file")"
+    separators_v="$(printf "%s\n%s\n%s" \
+        "virtual_start,18,19.9605,1.33171,678.154" \
+        "$separators_v" \
+        "virtual_end,1104,19.9605,1.33171,678.154" \
+    )"
+
+    cell_row=""
+    while IFS="" read -r p || [ -n "$p" ]
+    do
+        seps="$(echo "$separators_v" | intersecting_bboxes "$p")"
+        sep_count="$(echo "$seps" | wc -l )"
+        is_end="$(echo "$seps" | grep -c "virtual_end" || true)"
+        if [ "$sep_count" -lt 2 ]; then
+            cell_row="$(printf '%s\n%s' "$cell_row" "$p")"
+        fi
+        if [ "$sep_count" -eq 2 ] || [ "$is_end" -gt 0 ]; then
+            # Single cell or end of line break current merging
+            echo "$cell_row" | merge_cells
+            if [ "$sep_count" -eq 2 ]; then
+                # Output single cell
+                echo "$p"
+            fi
+            cell_row=""
+        fi
+    done < "$generic_grid_file"
+
+}
+
 
 
 contained_bboxes () {
