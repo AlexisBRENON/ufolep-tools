@@ -1,0 +1,23 @@
+select.element-description {
+    text-wrap-style: balance;
+    text-wrap-mode: wrap;
+
+    &>* {
+        text-wrap-style: balance;
+        text-wrap-mode: wrap;
+    }
+}
+
+
+.input-group-text.element-symbol {
+    width: 3rem;
+    cursor: pointer;
+
+    @each $name, $color in $magmas {
+        &.#{$name} {
+            --bs-border-opacity: 1;
+            border-left-width: 5px;
+            border-left-color: rgba(var(--bs-#{$name}-rgb), var(--bs-border-opacity));
+        }
+    }
+}

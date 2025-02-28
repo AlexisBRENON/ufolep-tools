@@ -31,7 +31,7 @@ title: Brochure GAM
 <div class="row justify-content-evenly">
 {% assign apparel_groups = site.data.db | group_by: "agres" %}
 {% for apparel_group in apparel_groups %}
-<div class="apparel-{{ apparel_group['name'] }} col-3 vstack">
+<div class="apparel-{{ apparel_group['name'] }} col-4 vstack">
     <h2>{{apparel_group["name"]}}</h2>
     {% assign elements_groups = apparel_group["items"] | group_by: "group" %}
     {% for elements_group in elements_groups %}
