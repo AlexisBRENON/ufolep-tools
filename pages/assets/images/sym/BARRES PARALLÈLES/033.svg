@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="34.613853"
+   height="24.869709"
+   viewBox="0 0 34.613852 24.869708"
+   sodipodi:docname="cell.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:page
+       x="0"
+       y="0"
+       inkscape:label="1"
+       id="page1"
+       width="34.613853"
+       height="24.869707"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <path
+     style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"
+     d="m 1.9530001,20.239857 c 1.077,0 1.953,-0.875 1.953,-1.954 0,-1.077 -0.876,-1.953 -1.953,-1.953 -1.079,0 -1.95299999739471,0.876 -1.95299999739471,1.953 0,1.079 0.87399999739471,1.954 1.95299999739471,1.954"
+     id="path1147" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33171;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 7.6200001,18.384857 14.385,2.4888566 21.156,18.384857"
+     id="path1148" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33171;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 27.604,0.66585664 V 24.203857"
+     id="path1149" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33171;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 33.948,16.629857 c 0,1.782 -1.448,3.23 -3.23,3.23 -1.786,0 -3.229,-1.448 -3.229,-3.23 0,-1.786 1.443,-3.229 3.229,-3.229 1.782,0 3.23,1.443 3.23,3.229 z"
+     id="path1150" />
+</svg>

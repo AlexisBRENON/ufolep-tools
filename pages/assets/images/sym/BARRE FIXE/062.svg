@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="40.357903"
+   height="21.596712"
+   viewBox="0 0 40.3579 21.596711"
+   sodipodi:docname="cell.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:page
+       x="3.6544851e-08"
+       y="1.6047535e-06"
+       inkscape:label="1"
+       id="page1"
+       width="40.357899"
+       height="21.596712"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33171;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 36.722364,0.82185146 c -6.504,1.62000204 -8.604,6.58300204 -4.072,9.81300154 1.495,1.068 4.203,1.609 6.183,0.896 1.889,-0.688 0.359,-2.3439995 -1.605,-2.6829995 -1.624,-0.281 -3.266,0.021 -4.438,0.797 -2,1.3339995 -2.374,3.1099995 -2.405,4.5989995 -0.057,2.463 2.156,6.135 7.557,6.296"
+     id="path1019" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33171;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 29.692364,20.930853 6.161,-5.312"
+     id="path1020" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33171;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 11.556364,3.5358535 c -6.4219994,1.52 -13.1869994,6.427 -10.1399994,12.1709995 4,7.562 25.1879994,-0.843 25.1879994,-0.843"
+     id="path1021" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33171;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 17.984364,9.7908535 -5.751,-6.255 7.948,-2.87000204"
+     id="path1022" />
+</svg>

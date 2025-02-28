@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="37.487709"
+   height="23.78471"
+   viewBox="0 0 37.487707 23.78471"
+   sodipodi:docname="cell.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:page
+       x="0"
+       y="0"
+       inkscape:label="1"
+       id="page1"
+       width="37.487705"
+       height="23.78471"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33171;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 0.66585517,22.758855 v -7.588 c 0,-3.817 3.09300003,-6.9120005 6.90700033,-6.9120005 3.8169995,0 6.9099995,3.0950005 6.9099995,6.9120005 v 7.183"
+     id="path957" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33171;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 17.810855,13.977855 7.74,-7.7910005"
+     id="path958" />
+  <path
+     style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"
+     d="m 28.384855,3.3378545 c -0.839,1.833 -1.642,4.344 -1.766,6.265 l -1.437,-3.041 -3.052,-1.423 c 1.921,-0.135 4.421,-0.957 6.255,-1.801"
+     id="path959" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33171;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 33.712855,0.66585455 V 23.118855"
+     id="path960" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33171;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 36.821855,15.467855 c 0,1.703 -1.38,3.078 -3.079,3.078 -1.702,0 -3.082,-1.375 -3.082,-3.078 0,-1.698 1.38,-3.078 3.082,-3.078 1.699,0 3.079,1.38 3.079,3.078 z"
+     id="path961" />
+</svg>

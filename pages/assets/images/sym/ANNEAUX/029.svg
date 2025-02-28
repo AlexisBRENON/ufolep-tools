@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="28.665854"
+   height="30.931709"
+   viewBox="0 0 28.665853 30.931709"
+   sodipodi:docname="cell.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:page
+       x="0"
+       y="0"
+       inkscape:label="1"
+       id="page1"
+       width="28.665854"
+       height="30.931709"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33171;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 20.329,24.118856 V 0.66585577"
+     id="path1208" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33171;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 12.652,5.8808558 H 28"
+     id="path1209" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33171;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 20.412,30.265856 c 1.079,0 1.953,-0.876 1.953,-1.953 0,-1.079 -0.874,-1.954 -1.953,-1.954 -1.079,0 -1.953,0.875 -1.953,1.954 0,1.077 0.874,1.953 1.953,1.953 z"
+     id="path1210" />
+  <path
+     style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"
+     d="m 1.8189995,22.634856 c 0,0.76 -0.328,1.162 -0.91199997,1.162 -0.578,0 -0.90699999660986,-0.402 -0.90699999660986,-1.162 V 6.5468558 c 0,-0.51 0.40099999660986,-0.886 0.90699999660986,-0.912 H 7.3129995 c 0.578,0 0.959,0.38 0.959,0.834 0,0.453 -0.381,0.833 -0.959,0.833 h -5.494 v 6.5250002 h 4.858 c 0.584,0 0.964,0.382 0.964,0.839 0,0.453 -0.38,0.833 -0.964,0.833 h -4.858 z"
+     id="path1211" />
+</svg>

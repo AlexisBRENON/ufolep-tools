@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="44.170208"
+   height="9.7437735"
+   viewBox="0 0 44.170206 9.7437737"
+   sodipodi:docname="cell.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:page
+       x="1.5284652e-08"
+       y="1.965978e-08"
+       inkscape:label="1"
+       id="page1"
+       width="44.170208"
+       height="9.7437735"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33171;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 0.66585508,3.3018532 c 2.38540002,5.511 9.68119992,7.2869998 14.43169992,3.448 1.5683,-1.265 2.3588,-3.557 1.3068,-5.234 -1,-1.59299996 -3.4426,-0.303 -3.9374,1.36 -0.4106,1.374 0.027,2.765 1.1776,3.755 1.953,1.692 4.5676,2.01 6.7505,2.035"
+     id="path1248" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33171;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 14.671055,7.0678532 c 2.176,1.527 7.4052,2.505 11.864,0.01 1.76,-0.989 2.36,-3.557 1.3078,-5.234 -1,-1.59899996 -3.4437,-0.301 -3.9385,1.36 -0.4104,1.374 0.0266,2.765 1.1719,3.755 1.9588,1.693 5.4896,2.765 10.0682,1.682"
+     id="path1249" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33171;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 33.915255,0.66585324 h 9.5891 V 4.8598532"
+     id="path1250" />
+</svg>

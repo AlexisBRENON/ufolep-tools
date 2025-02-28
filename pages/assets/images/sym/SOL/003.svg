@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="41.027378"
+   height="27.799679"
+   viewBox="0 0 41.027377 27.799678"
+   sodipodi:docname="cell.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:page
+       x="0"
+       y="0"
+       inkscape:label="1"
+       id="page1"
+       width="41.027378"
+       height="27.799679"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33038;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 33.45119,0.6651904 c -3.833,0 -6.942,3.1093 -6.942,6.9427 0,3.8385996 3.109,6.9425996 6.942,6.9425996 h 6.911"
+     id="path727" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33038;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 0.6651899,27.13449 19.27919,10.75849 v 15.8546"
+     id="path728" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33038;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 22.73819,7.0971904 c 0,1.9587 -1.589,3.5412996 -3.552,3.5412996 -1.959,0 -3.548,-1.5825996 -3.548,-3.5412996 0,-1.9627 1.589,-3.552 3.548,-3.552 1.963,0 3.552,1.5893 3.552,3.552 z"
+     id="path729" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33038;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 31.94619,6.2011904 V 11.03449 h 5.432"
+     id="path730" />
+  <path
+     style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"
+     d="m 33.07519,4.0504904 c 0,0.5627 -0.457,1.016 -1.014,1.016 -0.563,0 -1.016,-0.4533 -1.016,-1.016 0,-0.5573 0.453,-1.0106 1.016,-1.0106 0.557,0 1.014,0.4533 1.014,1.0106"
+     id="path731" />
+</svg>

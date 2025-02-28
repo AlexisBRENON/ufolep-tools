@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="28.411711"
+   height="19.895247"
+   viewBox="0 0 28.411709 19.895246"
+   sodipodi:docname="cell.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:page
+       x="2.8454756e-06"
+       y="4.8331884e-07"
+       inkscape:label="1"
+       id="page1"
+       width="28.411709"
+       height="19.895247"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33171;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 5.9358434,17.411246 c 9.9099996,-5.464 18.9699996,0.323 18.9699996,0.323"
+     id="path1774" />
+  <path
+     style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"
+     d="m 28.295843,19.895246 c -1.97,-0.427 -4.59,-0.683 -6.5,-0.396 l 2.67,-2.052 0.74,-3.287 c 0.54,1.855 1.87,4.126 3.09,5.735"
+     id="path1775" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33171;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 0.66584336,2.6442455 c 1.87000004,4.324 7.60000004,5.719 11.32999964,2.704 1.24,-0.994 1.86,-2.792 1.03,-4.109 -0.79,-1.256 -2.7,-0.24 -3.0899996,1.067 -0.33,1.084 0.02,2.172 0.9199996,2.953 1.53,1.328 3.59,1.573 5.3,1.6"
+     id="path1776" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33171;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 11.665843,5.5982455 c 1.71,1.198 5.82,1.969 9.32,0.01 1.38,-0.776 1.85,-2.797 1.03,-4.114 -0.79,-1.255 -2.71,-0.24 -3.1,1.068 -0.32,1.082 0.02,2.177 0.93,2.953 1.53,1.328 4.3,2.172 7.9,1.317"
+     id="path1777" />
+</svg>

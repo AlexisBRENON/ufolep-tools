@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="16.217854"
+   height="23.905855"
+   viewBox="0 0 16.217853 23.905855"
+   sodipodi:docname="cell.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:page
+       x="0"
+       y="0"
+       inkscape:label="1"
+       id="page1"
+       width="16.217854"
+       height="23.905855"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33171;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 3.7178558,9.3390009 V 23.240001"
+     id="path1430" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33171;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 10.868356,9.0730009 c 0,1.9640001 -1.5880002,3.5520001 -3.5520002,3.5520001 -1.9584,0 -3.5516,-1.588 -3.5516,-3.5520001 0,-1.958 1.5932,-3.552 3.5516,-3.552 1.964,0 3.5520002,1.594 3.5520002,3.552 z"
+     id="path1431" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33171;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 0.66585579,6.1310009 c 6.49480001,-8.052 12.55200021,-2.651 12.55200021,-2.651"
+     id="path1432" />
+  <path
+     style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"
+     d="m 16.217856,6.1520009 c -1.8802,-0.735 -4.4266,-1.401 -6.3547002,-1.423 l 2.9641002,-1.598 L 14.077856,9.2230153e-7 C 14.316356,1.9170009 15.275156,4.3710009 16.217856,6.1520009"
+     id="path1433" />
+</svg>

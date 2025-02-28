@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="44.909855"
+   height="26.49831"
+   viewBox="0 0 44.909852 26.49831"
+   sodipodi:docname="cell.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:page
+       x="4.7711005e-08"
+       y="1.0633176e-07"
+       inkscape:label="1"
+       id="page1"
+       width="44.909851"
+       height="26.49831"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33171;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 13.438,4.6192548 V 22.587155"
+     id="path712" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33171;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 18.276,16.805855 c 0,1.36 -1.104,2.464 -2.464,2.464 -1.364,0 -2.464,-1.104 -2.464,-2.464 0,-1.3587 1.1,-2.4627 2.464,-2.4627 1.36,0 2.464,1.104 2.464,2.4627 z"
+     id="path713" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33171;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 39.406,7.8632548 V 25.832455"
+     id="path714" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33171;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 44.244,20.051155 c 0,1.364 -1.104,2.4694 -2.462,2.4694 -1.366,0 -2.464,-1.1054 -2.464,-2.4694 0,-1.3586 1.098,-2.464 2.464,-2.464 1.358,0 2.462,1.1054 2.462,2.464 z"
+     id="path715" />
+  <path
+     style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"
+     d="m 21.203,7.9725548 c 0.495,0 0.776,-0.4627 0.776,-1.0987 0,-0.5773 -0.271,-1.0773 -0.776,-1.0773 -0.5,0 -0.787,0.4893 -0.787,1.0933 0,0.6094 0.292,1.0827 0.782,1.0827 z m -0.031,0.5787 c -0.953,0 -1.521,-0.724 -1.521,-1.64 0,-0.9694 0.625,-1.6934 1.573,-1.6934 0.99,0 1.531,0.74 1.531,1.636 0,1.0627 -0.636,1.6974 -1.579,1.6974 z"
+     id="path716" />
+  <path
+     style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"
+     d="m 23.968,5.2698548 v 1.8547 c 0,0.5627 0.214,0.844 0.584,0.844 0.38,0 0.594,-0.272 0.594,-0.844 v -1.8547 h 0.729 v 1.812 c 0,0.996 -0.505,1.4694 -1.349,1.4694 -0.812,0 -1.287,-0.4534 -1.287,-1.4787 v -1.8027 z"
+     id="path717" />
+  <path
+     style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:none"
+     d="m 1.3380001,18.207155 c -0.739,0 -1.338000004562372,0.5987 -1.338000004562372,1.3334 0,0.74 0.599000004562372,1.3386 1.338000004562372,1.3386 0.734,0 1.333,-0.5986 1.333,-1.3386 0,-0.7347 -0.599,-1.3334 -1.333,-1.3334"
+     id="path718" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33171;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 1.3430001,0.66585478 V 15.311155 l 7.9230004,7.6467"
+     id="path719" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33171;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="M 1.3430001,15.311155 10.004,8.1298548"
+     id="path720" />
+  <path
+     style="fill:none;stroke:#231f20;stroke-width:1.33171;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     d="m 24.208,11.425855 h 9.511 l -2.74,8.068 5.188,-1.0053 -2.74,5.9013"
+     id="path721" />
+</svg>
