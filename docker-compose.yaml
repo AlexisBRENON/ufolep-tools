@@ -3,7 +3,7 @@ services:
   jekyll:
     image: jekyll/jekyll:latest
     volumes:
-      - "./pages:/srv/jekyll:Z"
+      - "./docs:/srv/jekyll:Z"
     command: ["jekyll", "serve", "--incremental", "--trace"]
     ports:
       - "[::1]:4000:4000"
