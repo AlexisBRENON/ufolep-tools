@@ -4,6 +4,6 @@ services:
     image: jekyll/jekyll:latest
     volumes:
       - "./docs:/srv/jekyll:Z"
-    command: ["jekyll", "serve", "--incremental", "--trace"]
+    command: ["jekyll", "serve", "--incremental", "--baseurl", "/"]
     ports:
       - "[::1]:4000:4000"

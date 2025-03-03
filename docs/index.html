@@ -5,25 +5,33 @@ title: Brochure GAM
 
 
 <div class="alert alert-secondary" role="alert">
-    <p>
-        Conception et illustrations originale: www.accrostiche.com
+    <p> Conception et illustrations originale: www.accrostiche.com</p>
+    <p> Vous pouvez télécharger les données:
+        <a href="{{ " assets/db.json" | relative_url }}" target="_blank">db.json</a>.
     </p>
-    <p>
-        Vous pouvez télécharger les données: <a href="{{ "assets/db.json" | relative_url }}" target="_blank">db.json</a>
-    </p>
+    <p>Cliquez sur le symbole d'un élément pour voir l'illustration.</p>
+    {% assign max_value = site.data.db | map: "value" | sort | last | times: 10 | minus: 1 | round %}
+    <form>
+        <div class="row row-cols-auto">
+            <label class="col col-form-label">Code couleur pour la valeur des éléments:</label>
+            <div class="col">
+                <div class="row">
+{% for i in (0..max_value) %}
+{% assign variant_index = i | plus: 0.0 | divided_by: max_value | times: 12 | round %}
+                    <div class="input-group col">
+                        <div class="input-group-text border-0 border-start border-5 border-magma-{{variant_index}}-12">0,{{ i | plus: 1 }}
+                        </div>
+                    </div>
+                    {% endfor %}
+                    </div>
+            </div>
+            </div>
+            </form>
+            <p>Utilisez le menu déroulant de chaque élément pour choisir le text qui l'accompagne (texte de référence, ou noms
+                courts)</p>
 </div>
 
 
-{% assign max_value = site.data.db |  map: "value" | sort | last | times: 10 | minus: 1 | round %}
-<div class="row">
-    <h2>Code couleur</h2>
-    <div class="row row-cols-auto text-center">
-    {% for i in (0..max_value) %}
-        {% assign variant_index = i | plus: 0.0 | divided_by: max_value | times: 12 | round %}
-        <div class="col text-bg-magma-{{ variant_index }}-12">0,{{ i | plus: 1 }}</div>
-    {% endfor %}
-    </div>
-</div>
 
 <hr class="my-3"/>
 
@@ -32,11 +40,11 @@ title: Brochure GAM
 {% assign apparel_groups = site.data.db | group_by: "agres" %}
 {% for apparel_group in apparel_groups %}
 <div class="apparel-{{ apparel_group['name'] }} col-4 vstack">
-    <h2>{{apparel_group["name"]}}</h2>
+    <h2 class="text-capitalize">{{apparel_group["name"] | downcase}}</h2>
     {% assign elements_groups = apparel_group["items"] | group_by: "group" %}
     {% for elements_group in elements_groups %}
     <div class="group-{{ elements_group['name'] }}">
-        <h3>{{ elements_group['name'] }}</h3>
+        <h3 class="text-capitalize">{{ elements_group['name'] }}</h3>
         {% assign elements = elements_group['items'] | sort: "value" %}
         {% for element in elements %}
             {%- include element.html max_value=max_value element=element -%}

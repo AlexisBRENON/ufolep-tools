@@ -4,17 +4,21 @@
 
 <form class="">
     <div class="input-group">
-        <label class="input-group-text element-symbol magma-{{ variant_index }}-12 ratio-1x1" data-bs-toggle="collapse" data-bs-target="#{{ element_id }}-drawing">
+        <div class="input-group-text magma-{{ variant_index }}-12 element-symbol ratio-1x1" data-bs-toggle="collapse"
+            data-bs-target="#{{ element_id }}-drawing">
             <img src="./assets/images/sym/{{ include.element['agres'] }}/{{ element_padded_index }}.svg"
             class="m-auto object-fit-cover" loading="lazy"/>
-        </label>
+        </div>
         <select class="form-select element-description"
                 aria-label="Sélectionner le libellé préféré">
             {% for label in element["short_names"] %}
-                <option>{{label}}</option>
+                <option {%if forloop.first %}selected{% endif %}>{{label}}</option>
             {% endfor %}
-            <option selected>{{ element['description'] }}</option>
+            <option>"{{ element['description'] }}"</option>
         </select>
+        <label class="input-group-text">
+            {{ element['id'] }}
+        </label>
     </div>
     <img src="./assets/images/drawings/{{ include.element['agres'] }}/{{ element_padded_index }}.svg"
         id="{{ element_id }}-drawing"

@@ -11,7 +11,10 @@
         "group": "appui, maintien ou force",
         "id": 2,
         "description": "Départ fente ATR retour fente",
-        "value": 0.1
+        "value": 0.1,
+        "short_names": [
+            "ATR"
+        ]
     },
     {
         "agres": "SOL",
@@ -39,7 +42,10 @@
         "group": "appui, maintien ou force",
         "id": 8,
         "description": "Départ fente ATR tenu 2\"",
-        "value": 0.3
+        "value": 0.3,
+        "short_names": [
+            "ATR tenu"
+        ]
     },
     {
         "agres": "SOL",
@@ -53,7 +59,10 @@
         "group": "appui, maintien ou force",
         "id": 10,
         "description": "ATR 1/2 tour",
-        "value": 0.3
+        "value": 0.3,
+        "short_names": [
+            "Demi-valse"
+        ]
     },
     {
         "agres": "SOL",
@@ -102,7 +111,10 @@
         "group": "appui, maintien ou force",
         "id": 18,
         "description": "ATR 1/1 tour",
-        "value": 0.4
+        "value": 0.4,
+        "short_names": [
+            "Valse"
+        ]
     },
     {
         "agres": "SOL",
@@ -795,14 +807,20 @@
         "group": "élan d'une jambe",
         "id": 1,
         "description": "En appui facial, élévation au moins à l'horizontale d'une jambe puis de l'autre",
-        "value": 0.1
+        "value": 0.1,
+        "short_names": [
+            "Balancés (horizontale)"
+        ]
     },
     {
         "agres": "ARÇONS",
         "group": "élan d'une jambe",
         "id": 2,
         "description": "En appui dorsal, élévation au moins à l'horizontale d'une jambe puis de l'autre",
-        "value": 0.1
+        "value": 0.1,
+        "short_names": [
+            "Balancés dorsaux (horizontale)"
+        ]
     },
     {
         "agres": "ARÇONS",
@@ -837,14 +855,20 @@
         "group": "élan d'une jambe",
         "id": 10,
         "description": "En appui facial, balancé d'un coté puis de l'autre (voir annexe C)",
-        "value": 0.3
+        "value": 0.3,
+        "short_names": [
+            "Balancés"
+        ]
     },
     {
         "agres": "ARÇONS",
         "group": "élan d'une jambe",
         "id": 11,
         "description": "En appui dorsal, balancé d'un coté puis de l'autre (voir annexe C)",
-        "value": 0.3
+        "value": 0.3,
+        "short_names": [
+            "Balancés dorsaux"
+        ]
     },
     {
         "agres": "ARÇONS",
@@ -879,7 +903,10 @@
         "group": "élan d'une jambe",
         "id": 16,
         "description": "Ciseaux avant ou arrière avec saut latéral",
-        "value": 0.4
+        "value": 0.4,
+        "short_names": [
+            "Ciseau sauté"
+        ]
     },
     {
         "agres": "ARÇONS",
@@ -1040,28 +1067,40 @@
         "group": "transport",
         "id": 61,
         "description": "Transport en appui facial jambe serrées, depuis une extrémité vers les arçons",
-        "value": 0.1
+        "value": 0.1,
+        "short_names": [
+            "Montée"
+        ]
     },
     {
         "agres": "ARÇONS",
         "group": "transport",
         "id": 62,
         "description": "Transport en appui facial jambe serrées, depuis les arçons vers une extrémité",
-        "value": 0.1
+        "value": 0.1,
+        "short_names": [
+            "Descente"
+        ]
     },
     {
         "agres": "ARÇONS",
         "group": "transport",
         "id": 64,
         "description": "Transport en appui cavalier d'une extrémité vers les arçons (les jambes doivent être dégagées lors de l'appui cavalier)",
-        "value": 0.2
+        "value": 0.2,
+        "short_names": [
+            "Montée cavalier"
+        ]
     },
     {
         "agres": "ARÇONS",
         "group": "transport",
         "id": 65,
         "description": "Transport en appui cavalier des arçons vers une extrémité (les jambes doivent être dégagées lors de l'appui cavalier)",
-        "value": 0.2
+        "value": 0.2,
+        "short_names": [
+            "Descente cavalier"
+        ]
     },
     {
         "agres": "ARÇONS",
@@ -1180,7 +1219,10 @@
         "group": "changement de face",
         "id": 103,
         "description": "Cercle latéral avec demi-tour et transport en appui sur un bras (des arçons vers une extrémité)",
-        "value": 0.4
+        "value": 0.4,
+        "short_names": [
+            "K18"
+        ]
     },
     {
         "agres": "ARÇONS",
@@ -1285,7 +1327,10 @@
         "group": "sorties",
         "id": 130,
         "description": "Sortie berline (franchissement par passage facial corps aligné amenée d'au moins un demi-cercle)",
-        "value": 0.4
+        "value": 0.4,
+        "short_names": [
+            "Berline"
+        ]
     },
     {
         "agres": "ARÇONS",
@@ -1334,28 +1379,40 @@
         "group": "établissement à l'appui en élan ou en force",
         "id": 4,
         "description": "Simultané sans aide",
-        "value": 0.3
+        "value": 0.3,
+        "short_names": [
+            "Simultané"
+        ]
     },
     {
         "agres": "ANNEAUX",
         "group": "établissement à l'appui en élan ou en force",
         "id": 5,
         "description": "Rétablissement arrière à l'appui",
-        "value": 0.3
+        "value": 0.3,
+        "short_names": [
+            "Réta arrière"
+        ]
     },
     {
         "agres": "ANNEAUX",
         "group": "établissement à l'appui en élan ou en force",
         "id": 7,
         "description": "Rétablissement avant à l'appui",
-        "value": 0.4
+        "value": 0.4,
+        "short_names": [
+            "Réta avant"
+        ]
     },
     {
         "agres": "ANNEAUX",
         "group": "établissement à l'appui en élan ou en force",
         "id": 8,
         "description": "Etablissement avant en tournant en arrière à l'appui",
-        "value": 0.4
+        "value": 0.4,
+        "short_names": [
+            "Strolli"
+        ]
     },
     {
         "agres": "ANNEAUX",
@@ -1516,13 +1573,16 @@
         "group": "force ou maintien",
         "id": 38,
         "description": "Suspension renversée tenue 2\"",
-        "value": 0.1
+        "value": 0.1,
+        "short_names": [
+            "Chandelle tenue"
+        ]
     },
     {
         "agres": "ANNEAUX",
         "group": "force ou maintien",
         "id": 40,
-        "description": "Equerre jambes échies tenue 2\"",
+        "description": "Equerre jambes fléchies tenue 2\"",
         "value": 0.2
     },
     {
@@ -1530,7 +1590,10 @@
         "group": "force ou maintien",
         "id": 41,
         "description": "Monter jambes tendues à la suspension renversée sans élan",
-        "value": 0.2
+        "value": 0.2,
+        "short_names": [
+            "Montée chandelle"
+        ]
     },
     {
         "agres": "ANNEAUX",
@@ -1544,7 +1607,10 @@
         "group": "force ou maintien",
         "id": 46,
         "description": "De la suspension, renversement avant lentement",
-        "value": 0.4
+        "value": 0.4,
+        "short_names": [
+            "Menichelli"
+        ]
     },
     {
         "agres": "ANNEAUX",
@@ -1572,7 +1638,10 @@
         "group": "force ou maintien",
         "id": 52,
         "description": "Equerre jambes à la verticale tenue 2\"",
-        "value": 0.5
+        "value": 0.5,
+        "short_names": [
+            "Équerre italienne tenue"
+        ]
     },
     {
         "agres": "ANNEAUX",
@@ -1663,7 +1732,10 @@
         "group": "appuis",
         "id": 73,
         "description": "Descente avant ou arrière à la suspension renversée ou mi renversée",
-        "value": 0.1
+        "value": 0.1,
+        "short_names": [
+            "Descente en chandelle"
+        ]
     },
     {
         "agres": "ANNEAUX",
@@ -1712,49 +1784,70 @@
         "group": "élans",
         "id": 85,
         "description": "De la suspension renversée, prise d'élan par fermeture ouverture dynamique , épaules en dessous des anneaux",
-        "value": 0.1
+        "value": 0.1,
+        "short_names": [
+            "Prise d'élan"
+        ]
     },
     {
         "agres": "ANNEAUX",
         "group": "élans",
         "id": 87,
         "description": "Fouetté avant /arrière et s'élever en suspension corps tendu",
-        "value": 0.2
+        "value": 0.2,
+        "short_names": [
+            "Montée chandelle tendue"
+        ]
     },
     {
         "agres": "ANNEAUX",
         "group": "élans",
         "id": 88,
         "description": "Dislocation avant corps carpé épaules en dessous des anneaux",
-        "value": 0.2
+        "value": 0.2,
+        "short_names": [
+            "Disloque avant carpée"
+        ]
     },
     {
         "agres": "ANNEAUX",
         "group": "élans",
         "id": 89,
         "description": "Balancer de l'arrière vers l'avant, bassin à hauteur des anneaux",
-        "value": 0.2
+        "value": 0.2,
+        "short_names": [
+            "Balancés AV (horizontale)"
+        ]
     },
     {
         "agres": "ANNEAUX",
         "group": "élans",
         "id": 90,
         "description": "Balancer de l'avant vers l'arrière, bassin à hauteur des anneaux",
-        "value": 0.2
+        "value": 0.2,
+        "short_names": [
+            "Balancés AR (horizontale)"
+        ]
     },
     {
         "agres": "ANNEAUX",
         "group": "élans",
         "id": 91,
         "description": "Balancer de l'arrière vers l'avant, bassin à 45° au-dessus des anneaux ",
-        "value": 0.3
+        "value": 0.3,
+        "short_names": [
+            "Balancés AV (>45°)"
+        ]
     },
     {
         "agres": "ANNEAUX",
         "group": "élans",
         "id": 92,
         "description": "Balancer de l'avant vers l'arrière, bassin à 45° au-dessus des anneaux ",
-        "value": 0.3
+        "value": 0.3,
+        "short_names": [
+            "Balancés AR (>45°)"
+        ]
     },
     {
         "agres": "ANNEAUX",
@@ -1768,14 +1861,20 @@
         "group": "élans",
         "id": 94,
         "description": "Dislocation arrière corps tendu épaules en dessous des anneaux",
-        "value": 0.3
+        "value": 0.3,
+        "short_names": [
+            "Disloque AR"
+        ]
     },
     {
         "agres": "ANNEAUX",
         "group": "élans",
         "id": 95,
         "description": "Dislocation avant corps tendu épaules en dessous des anneaux",
-        "value": 0.3
+        "value": 0.3,
+        "short_names": [
+            "Disloque AV"
+        ]
     },
     {
         "agres": "ANNEAUX",
@@ -1880,7 +1979,10 @@
         "group": "appuis renversés",
         "id": 116,
         "description": "ATR bras échis tenu 2\" (épaules au niveau supérieur des anneaux) ",
-        "value": 0.3
+        "value": 0.3,
+        "short_names": [
+            "Bougie"
+        ]
     },
     {
         "agres": "ANNEAUX",
@@ -1985,7 +2087,10 @@
         "group": "sorties",
         "id": 139,
         "description": "Salto arrière corps tendu lâcher avant la verticale",
-        "value": 0.3
+        "value": 0.3,
+        "short_names": [
+            "Échappe"
+        ]
     },
     {
         "agres": "ANNEAUX",
@@ -1999,7 +2104,10 @@
         "group": "sorties",
         "id": 142,
         "description": "Salto arrière corps tendu avec 1/2 tour",
-        "value": 0.4
+        "value": 0.4,
+        "short_names": [
+            "Échappe demi"
+        ]
     },
     {
         "agres": "ANNEAUX",
@@ -2013,14 +2121,20 @@
         "group": "sorties",
         "id": 144,
         "description": "Koste Etablissement arrière et salto arrière groupé ou carpé",
-        "value": 0.4
+        "value": 0.4,
+        "short_names": [
+            "Koste"
+        ]
     },
     {
         "agres": "ANNEAUX",
         "group": "sorties",
         "id": 145,
         "description": "Salto arrière corps tendu avec 1/1 tour",
-        "value": 0.5
+        "value": 0.5,
+        "short_names": [
+            "Échappe vrille"
+        ]
     },
     {
         "agres": "ANNEAUX",
@@ -2041,7 +2155,10 @@
         "group": "sorties",
         "id": 148,
         "description": "Sortie par strolli tendu et salto arrière tendu de l'appui",
-        "value": 0.5
+        "value": 0.5,
+        "short_names": [
+            "Strolli"
+        ]
     },
     {
         "agres": "ANNEAUX",
@@ -2104,28 +2221,40 @@
         "group": "élan à l'appui",
         "id": 4,
         "description": "Balancé avant, corps aligné, bassin à hauteur des épaules",
-        "value": 0.2
+        "value": 0.2,
+        "short_names": [
+            "Balancés AV (horizontale)"
+        ]
     },
     {
         "agres": "BARRES PARALLÈLES",
         "group": "élan à l'appui",
         "id": 5,
         "description": "Balancé arrière, corps aligné, bassin à hauteur des épaules",
-        "value": 0.2
+        "value": 0.2,
+        "short_names": [
+            "Balancés AR (horizontale)"
+        ]
     },
     {
         "agres": "BARRES PARALLÈLES",
         "group": "élan à l'appui",
         "id": 7,
         "description": "Balancé avant, corps aligné, bassin à 45° au-dessus des épaules ",
-        "value": 0.3
+        "value": 0.3,
+        "short_names": [
+            "Balancés AV (>45°)"
+        ]
     },
     {
         "agres": "BARRES PARALLÈLES",
         "group": "élan à l'appui",
         "id": 8,
         "description": "Balancé arrière, corps aligné, bassin à 45° au-dessus des épaules",
-        "value": 0.3
+        "value": 0.3,
+        "short_names": [
+            "Balancés AR (>45°)"
+        ]
     },
     {
         "agres": "BARRES PARALLÈLES",
@@ -2174,7 +2303,10 @@
         "group": "élan à l'appui",
         "id": 17,
         "description": "Passer les jambes en avant à l'appui ou à l'équerre (entre les poteaux)",
-        "value": 0.4
+        "value": 0.4,
+        "short_names": [
+            "Coupé écart AV"
+        ]
     },
     {
         "agres": "BARRES PARALLÈLES",
@@ -2188,14 +2320,20 @@
         "group": "élan à l'appui",
         "id": 19,
         "description": "Élan à l'ATR tenu 2\" ou avec demi-tour",
-        "value": 0.4
+        "value": 0.4,
+        "short_names": [
+            "Balancés équi tenu ou demi-valse"
+        ]
     },
     {
         "agres": "BARRES PARALLÈLES",
         "group": "élan à l'appui",
         "id": 20,
         "description": "Passer les jambes écartées en arrière à l'appui (entre les poteaux)",
-        "value": 0.4
+        "value": 0.4,
+        "short_names": [
+            "Coupé écart AR"
+        ]
     },
     {
         "agres": "BARRES PARALLÈLES",
@@ -2209,7 +2347,10 @@
         "group": "élan à l'appui",
         "id": 22,
         "description": "Kato. De l'appui ou de l'appui échi, établissement avant et sauté avec demi-tour à l'appui",
-        "value": 0.5
+        "value": 0.5,
+        "short_names": [
+            "Kato"
+        ]
     },
     {
         "agres": "BARRES PARALLÈLES",
@@ -2300,7 +2441,10 @@
         "group": "élan à l'appui",
         "id": 37,
         "description": "Diamidov. Elan en avant 1/1 ou 5/4 sur un bras à l'ATR",
-        "value": 0.6
+        "value": 0.6,
+        "short_names": [
+            "Diamidov"
+        ]
     },
     {
         "agres": "BARRES PARALLÈLES",
@@ -2342,21 +2486,30 @@
         "group": "élan à l'appui brachial",
         "id": 49,
         "description": "Du balancer arrière s'abaisser à l'appui brachial",
-        "value": 0.1
+        "value": 0.1,
+        "short_names": [
+            "Descente brachiale AR"
+        ]
     },
     {
         "agres": "BARRES PARALLÈLES",
         "group": "élan à l'appui brachial",
         "id": 51,
         "description": "De l'arrière, en appui brachial, établissement avant au siège écarté par appui des jambes tendues",
-        "value": 0.1
+        "value": 0.1,
+        "short_names": [
+            "Réta avant (avec appui des jambes)"
+        ]
     },
     {
         "agres": "BARRES PARALLÈLES",
         "group": "élan à l'appui brachial",
         "id": 52,
         "description": "De l'arrière en appui brachial, établissement avant au siège écarté",
-        "value": 0.2
+        "value": 0.2,
+        "short_names": [
+            "Réta AV écart"
+        ]
     },
     {
         "agres": "BARRES PARALLÈLES",
@@ -2370,14 +2523,20 @@
         "group": "élan à l'appui brachial",
         "id": 54,
         "description": "Du balancer arrière corps tendu au moins à l'horizontale s'abaisser à l'appui brachial",
-        "value": 0.2
+        "value": 0.2,
+        "short_names": [
+            "Descente brachiale AR (horizontale)"
+        ]
     },
     {
         "agres": "BARRES PARALLÈLES",
         "group": "élan à l'appui brachial",
         "id": 55,
         "description": "Balancer brachial avant ou arrière bassin au moins à hauteur des barres",
-        "value": 0.2
+        "value": 0.2,
+        "short_names": [
+            "Balancés brachiaux (horizontale)"
+        ]
     },
     {
         "agres": "BARRES PARALLÈLES",
@@ -2391,14 +2550,20 @@
         "group": "élan à l'appui brachial",
         "id": 59,
         "description": "De l'avant en appui brachial, rétablissement arrière à l'appui",
-        "value": 0.3
+        "value": 0.3,
+        "short_names": [
+            "Réta AR"
+        ]
     },
     {
         "agres": "BARRES PARALLÈLES",
         "group": "élan à l'appui brachial",
         "id": 61,
         "description": "Établissement avant à l'appui",
-        "value": 0.4
+        "value": 0.4,
+        "short_names": [
+            "Réta AV"
+        ]
     },
     {
         "agres": "BARRES PARALLÈLES",
@@ -2489,7 +2654,10 @@
         "group": "élan en suspension",
         "id": 86,
         "description": "Bascule d'élan à l'appui brachial",
-        "value": 0.2
+        "value": 0.2,
+        "short_names": [
+            "Bascule brachiale"
+        ]
     },
     {
         "agres": "BARRES PARALLÈLES",
@@ -2524,7 +2692,10 @@
         "group": "élan en suspension",
         "id": 93,
         "description": "Bascule d'élan",
-        "value": 0.3
+        "value": 0.3,
+        "short_names": [
+            "Bascule"
+        ]
     },
     {
         "agres": "BARRES PARALLÈLES",
@@ -2538,7 +2709,10 @@
         "group": "élan en suspension",
         "id": 95,
         "description": "Bascule allemande (progression) à l'appui brachial",
-        "value": 0.4
+        "value": 0.4,
+        "short_names": [
+            "Bascule allemande brachiale"
+        ]
     },
     {
         "agres": "BARRES PARALLÈLES",
@@ -2552,7 +2726,10 @@
         "group": "élan en suspension",
         "id": 97,
         "description": "Moy à l'appui brachial",
-        "value": 0.4
+        "value": 0.4,
+        "short_names": [
+            "Moy brachial"
+        ]
     },
     {
         "agres": "BARRES PARALLÈLES",
@@ -2573,7 +2750,10 @@
         "group": "élan en suspension",
         "id": 102,
         "description": "Bascule allemande (progression) à l'appui",
-        "value": 0.5
+        "value": 0.5,
+        "short_names": [
+            "Bascule allemande"
+        ]
     },
     {
         "agres": "BARRES PARALLÈLES",
@@ -2713,7 +2893,10 @@
         "group": "maintiens-forces",
         "id": 125,
         "description": "Equerre jambes échies tenue 2\"",
-        "value": 0.2
+        "value": 0.2,
+        "short_names": [
+            "Équerre boule tenue"
+        ]
     },
     {
         "agres": "BARRES PARALLÈLES",
@@ -2727,7 +2910,10 @@
         "group": "maintiens-forces",
         "id": 128,
         "description": "De l'ATR demi-tour avant à l'ATR",
-        "value": 0.3
+        "value": 0.3,
+        "short_names": [
+            "Demi-valse"
+        ]
     },
     {
         "agres": "BARRES PARALLÈLES",
@@ -2776,7 +2962,10 @@
         "group": "maintiens-forces",
         "id": 136,
         "description": "Équerre jambes à la verticale tenue 2\"",
-        "value": 0.5
+        "value": 0.5,
+        "short_names": [
+            "Équerre italienne tenue"
+        ]
     },
     {
         "agres": "BARRES PARALLÈLES",
@@ -2804,7 +2993,10 @@
         "group": "maintiens-forces",
         "id": 140,
         "description": "Equerre jambes levées à l'horizontal tenue 2\"",
-        "value": 0.6
+        "value": 0.6,
+        "short_names": [
+            "Équerre renversée tenue"
+        ]
     },
     {
         "agres": "BARRES PARALLÈLES",
@@ -2860,7 +3052,10 @@
         "group": "sorties",
         "id": 152,
         "description": "Salto arrière groupé",
-        "value": 0.3
+        "value": 0.3,
+        "short_names": [
+            "Échappe groupée"
+        ]
     },
     {
         "agres": "BARRES PARALLÈLES",
@@ -2874,7 +3069,11 @@
         "group": "sorties",
         "id": 154,
         "description": "ATR demi-tour (réception sur le côté des barres entre les poteaux)",
-        "value": 0.3
+        "value": 0.3,
+        "short_names": [
+            "Feuille morte",
+            "Drapeau"
+        ]
     },
     {
         "agres": "BARRES PARALLÈLES",
@@ -2895,7 +3094,10 @@
         "group": "sorties",
         "id": 159,
         "description": "Salto arrière carpé ou tendu",
-        "value": 0.4
+        "value": 0.4,
+        "short_names": [
+            "Échappe"
+        ]
     },
     {
         "agres": "BARRES PARALLÈLES",
@@ -2986,56 +3188,80 @@
         "group": "élans en suspension",
         "id": 7,
         "description": "Balancé de l'avant vers l'arrière, bassin et épaules à hauteur de la barre",
-        "value": 0.2
+        "value": 0.2,
+        "short_names": [
+            "Balancés AR (horizontale)"
+        ]
     },
     {
         "agres": "BARRE FIXE",
         "group": "élans en suspension",
         "id": 8,
         "description": "Balancé de l'arrière vers l'avant, bassin et épaules à hauteur de la barre",
-        "value": 0.2
+        "value": 0.2,
+        "short_names": [
+            "Balancés AV (horizontale)"
+        ]
     },
     {
         "agres": "BARRE FIXE",
         "group": "élans en suspension",
         "id": 9,
         "description": "De la prise mixte en balancer avant, changer la prise pour être en prise lune et balancer en arrière en changeant les 2 prises en soleil simultanément",
-        "value": 0.2
+        "value": 0.2,
+        "short_names": [
+            "Changements de mains"
+        ]
     },
     {
         "agres": "BARRE FIXE",
         "group": "élans en suspension",
         "id": 10,
         "description": "Balancé de l'avant vers l'arrière, bassin et épaules à 45° au-dessus de la barre ",
-        "value": 0.3
+        "value": 0.3,
+        "short_names": [
+            "Balancés AR (45°)"
+        ]
     },
     {
         "agres": "BARRE FIXE",
         "group": "élans en suspension",
         "id": 11,
         "description": "Balancé de l'arrière vers l'avant, bassin et épaules à 45° au-dessus de la barre ",
-        "value": 0.3
+        "value": 0.3,
+        "short_names": [
+            "Balancés AV (45°)"
+        ]
     },
     {
         "agres": "BARRE FIXE",
         "group": "élans en suspension",
         "id": 13,
         "description": "Bascule d'élan",
-        "value": 0.3
+        "value": 0.3,
+        "short_names": [
+            "Bascule"
+        ]
     },
     {
         "agres": "BARRE FIXE",
         "group": "élans en suspension",
         "id": 14,
         "description": "Bascule de l'appui à l'appui",
-        "value": 0.3
+        "value": 0.3,
+        "short_names": [
+            "Bascule fixe"
+        ]
     },
     {
         "agres": "BARRE FIXE",
         "group": "élans en suspension",
         "id": 15,
         "description": "Etablissement arrière à l'appui",
-        "value": 0.3
+        "value": 0.3,
+        "short_names": [
+            "Réta AR"
+        ]
     },
     {
         "agres": "BARRE FIXE",
@@ -3049,21 +3275,30 @@
         "group": "élans en suspension",
         "id": 20,
         "description": "Grand tour avant (lune) 360°",
-        "value": 0.4
+        "value": 0.4,
+        "short_names": [
+            "Lune"
+        ]
     },
     {
         "agres": "BARRE FIXE",
         "group": "élans en suspension",
         "id": 21,
         "description": "Grand tour arrière (soleil) 360°",
-        "value": 0.4
+        "value": 0.4,
+        "short_names": [
+            "Soleil"
+        ]
     },
     {
         "agres": "BARRE FIXE",
         "group": "élans en suspension",
         "id": 22,
         "description": "Grand tour arrière sauté prise palmaire",
-        "value": 0.4
+        "value": 0.4,
+        "short_names": [
+            "Soleil sauté"
+        ]
     },
     {
         "agres": "BARRE FIXE",
@@ -3175,7 +3410,10 @@
         "group": "lâcher",
         "id": 40,
         "description": "Grand tour avant sauté ou sauté avec 1/2 tour",
-        "value": 0.5
+        "value": 0.5,
+        "short_names": [
+            "Soleil sauté ou sauté demi-tour"
+        ]
     },
     {
         "agres": "BARRE FIXE",
@@ -3210,7 +3448,10 @@
         "group": "lâcher",
         "id": 45,
         "description": "Voronin. Etablissement arrière et sauté carpé avec 1/2 tour à la suspension",
-        "value": 0.5
+        "value": 0.5,
+        "short_names": [
+            "Voronin"
+        ]
     },
     {
         "agres": "BARRE FIXE",
@@ -3245,14 +3486,20 @@
         "group": "lâcher",
         "id": 53,
         "description": "Markelov. Etablissement en arrière et poisson écart ou tendu avec 1/2 tour à la suspension",
-        "value": 0.6
+        "value": 0.6,
+        "short_names": [
+            "Markelov"
+        ]
     },
     {
         "agres": "BARRE FIXE",
         "group": "lâcher",
         "id": 55,
         "description": "Tkatchev (sous toute forme)",
-        "value": 0.6
+        "value": 0.6,
+        "short_names": [
+            "Tkatchev"
+        ]
     },
     {
         "agres": "BARRE FIXE",
@@ -3266,21 +3513,30 @@
         "group": "lâcher",
         "id": 58,
         "description": "Jager. Elancé en arrière et salto avant groupé carpé ou écart à la suspension",
-        "value": 0.6
+        "value": 0.6,
+        "short_names": [
+            "Jager"
+        ]
     },
     {
         "agres": "BARRE FIXE",
         "group": "lâcher",
         "id": 59,
         "description": "Gienger. Elancer en avant et salto arrière carpé ou tendu avec 1/2 tour à la suspension",
-        "value": 0.6
+        "value": 0.6,
+        "short_names": [
+            "Gienger"
+        ]
     },
     {
         "agres": "BARRE FIXE",
         "group": "lâcher",
         "id": 60,
         "description": "Kovacs ou avec 1/2 tour ou avec 1/1 tour",
-        "value": 0.6
+        "value": 0.6,
+        "short_names": [
+            "Kovacs"
+        ]
     },
     {
         "agres": "BARRE FIXE",
@@ -3385,7 +3641,10 @@
         "group": "éléments près de la barre",
         "id": 98,
         "description": "Tour d'appui arrière jambes tendues",
-        "value": 0.1
+        "value": 0.1,
+        "short_names": [
+            "Tour d'appui AR carpé"
+        ]
     },
     {
         "agres": "BARRE FIXE",
@@ -3399,7 +3658,10 @@
         "group": "éléments près de la barre",
         "id": 100,
         "description": "De l'appui renversement arrière corps tendu bassin près de la barre puis ler à la suspension",
-        "value": 0.1
+        "value": 0.1,
+        "short_names": [
+            "Filé"
+        ]
     },
     {
         "agres": "BARRE FIXE",
@@ -3413,7 +3675,10 @@
         "group": "éléments près de la barre",
         "id": 103,
         "description": "Tour d'appui arrière corps tendu",
-        "value": 0.2
+        "value": 0.2,
+        "short_names": [
+            "Tour d'appui AR"
+        ]
     },
     {
         "agres": "BARRE FIXE",
@@ -3427,7 +3692,10 @@
         "group": "éléments près de la barre",
         "id": 105,
         "description": "De l'appui renversement arrière corps tendu bassin près de la barre puis ler au-dessus de l'horizontale à la suspension",
-        "value": 0.2
+        "value": 0.2,
+        "short_names": [
+            "Filé (> horizontale)"
+        ]
     },
     {
         "agres": "BARRE FIXE",
@@ -3462,7 +3730,10 @@
         "group": "éléments près de la barre",
         "id": 110,
         "description": "Tour arrière libre bras aux oreilles au moins à l'horizontale",
-        "value": 0.3
+        "value": 0.3,
+        "short_names": [
+            "Tour AR (> horizontale)"
+        ]
     },
     {
         "agres": "BARRE FIXE",
@@ -3496,8 +3767,11 @@
         "agres": "BARRE FIXE",
         "group": "éléments près de la barre",
         "id": 116,
-        "description": "Passement lé à l'ATR (sauté ou non)",
-        "value": 0.4
+        "description": "Passement filé à l'ATR (sauté ou non)",
+        "value": 0.4,
+        "short_names": [
+            "Passe-fil"
+        ]
     },
     {
         "agres": "BARRE FIXE",
@@ -3644,14 +3918,20 @@
         "group": "sorties",
         "id": 139,
         "description": "Salto arrière corps tendu",
-        "value": 0.3
+        "value": 0.3,
+        "short_names": [
+            "Échappe"
+        ]
     },
     {
         "agres": "BARRE FIXE",
         "group": "sorties",
         "id": 140,
         "description": "Depuis un soleil, sortie par repoussé arrière depuis l'ATR (règle d'angles)",
-        "value": 0.3
+        "value": 0.3,
+        "short_names": [
+            "Soleil sauté"
+        ]
     },
     {
         "agres": "BARRE FIXE",
@@ -3693,7 +3973,10 @@
         "group": "sorties",
         "id": 146,
         "description": "Sortie salto arrière tendu depuis un soleil",
-        "value": 0.4
+        "value": 0.4,
+        "short_names": [
+            "Soleil échappe"
+        ]
     },
     {
         "agres": "BARRE FIXE",
@@ -3755,7 +4038,7 @@
         "agres": "BARRE FIXE",
         "group": "sorties",
         "id": 158,
-        "description": "Salto avant tendu avec 2/1 tours ou +Conception-illustrations www.acrostiche.com ",
+        "description": "Salto avant tendu avec 2/1 tours ou +",
         "value": 0.6
     },
     {
