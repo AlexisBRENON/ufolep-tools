@@ -955,21 +955,30 @@
         "group": "cercles",
         "id": 37,
         "description": "Cercle 180° jambes serrées (pas de pénalité pour prise d'élan en appui cavalier)",
-        "value": 0.2
+        "value": 0.2,
+        "short_names": [
+            "Demi-cercle"
+        ]
     },
     {
         "agres": "ARÇONS",
         "group": "cercles",
         "id": 40,
         "description": "Cercle (reconnaissance : voir page 12)",
-        "value": 0.3
+        "value": 0.3,
+        "short_names": [
+            "cercle"
+        ]
     },
     {
         "agres": "ARÇONS",
         "group": "cercles",
         "id": 43,
         "description": "Cercle Thomas",
-        "value": 0.4
+        "value": 0.4,
+        "short_names": [
+            "Thomas"
+        ]
     },
     {
         "agres": "ARÇONS",
@@ -1190,7 +1199,7 @@
         "agres": "ARÇONS",
         "group": "transport",
         "id": 88,
-        "description": "Transport en arrière de 5 en 1 : 5-3-1, 5-4-3-2-1 (Sivado)Conception-illustrations www.acrostiche.com ",
+        "description": "Transport en arrière de 5 en 1 : 5-3-1, 5-4-3-2-1 (Sivado)",
         "value": 0.6
     },
     {
