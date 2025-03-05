@@ -5,11 +5,13 @@
 element_padded_index | append: ".svg" %}
 
 <tr>
-    <td class="text-center align-content-center"><a href="#" data-bs-toggle="collapse"
+    <td class="text-center align-content-center position-relative">
+        <a class="stretched-link" href="#" data-bs-toggle="collapse"
             data-bs-target="#{{ element_id }}-collapse">
             <img src="./assets/images/sym/{{ include.element['agres'] }}/{{ element_padded_index }}.svg"
             class="m-auto object-fit-cover" loading="lazy"/>
-    </a></td>
+        </a>
+        </td>
     <td>"{{ element['description'] }}"</td>
     <td class="table-magma-{{variant_index}}-12 text-end">{{ element['id'] }}</td>
     </tr>
