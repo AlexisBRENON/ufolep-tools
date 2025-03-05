@@ -17,13 +17,9 @@ title: Brochure GAM
                 <div class="d-flex flex-row flex-wrap">
 {% for i in (0..max_value) %}
 {% assign variant_index = i | plus: 0.0 | divided_by: max_value | times: 12 | round %}
-                    <form class="mx-1 my-1 my-lg-0">
-                        <div class="input-group">
-                            <div class="input-group-text border-0 border-start border-5 border-magma-{{variant_index}}-12">
-                                0,{{ i | plus: 1}}
-                            </div>
-                        </div>
-                    </form>
+                    <div class="mx-1 my-1 my-lg-0 py-1 alert alert-magma-{{variant_index}}-12">
+                        0,{{ i | plus: 1}}
+                    </div>
                     {% endfor %}
                     </div>
             </div>

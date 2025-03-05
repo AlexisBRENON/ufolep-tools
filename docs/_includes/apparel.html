@@ -1,17 +1,30 @@
-<div class="row">
+<article class="row g-3">
     <div class="col-12 d-none d-print-block text-center">
         <h2 class="text-capitalize">{{ apparel_group['name'] | downcase }}</h2>
         <hr class="" />
     </div>
     {% assign elements_groups = include.apparel['items'] | group_by: "group" %}
     {% for elements_group in elements_groups %}
-    <div class="col-12 col-lg-4 group-{{ elements_group['name'] }}">
-        <h3 class="text-capitalize">{{ elements_group['name'] }}</h3>
-        {% assign elements = elements_group['items'] | sort: "value" %}
-        {% for element in elements %}
-        {%- include element.html max_value=max_value element=element -%}
-        {% endfor %}
-        <hr class="mt-1 mb-3" />
-    </div>
+    {% assign elements = elements_group['items'] | sort: "value" %}
+    <article class="col-4">
+        <div class="card">
+            <header class="card-header">
+                <h3 class="text-capitalize">{{ elements_group['name'] }}</h3>
+            </header>
+            <table class="table mb-0">
+                <colgroup>
+                    <col style="width:20%">
+                    <col style="width:70%">
+                    <col style="width:10%">
+                </colgroup>
+                {% for element in elements %}
+                {%- include element.html max_value=max_value element=element -%}
+                {% endfor %}
+            </table>
+            <footer class="card-footer text-end">
+                <small class="text-body-secondary">{{ elements | size }} éléments</small>
+            </footer>
+            </div>
+            </article>
     {% endfor %}
-</div>
+</article>
