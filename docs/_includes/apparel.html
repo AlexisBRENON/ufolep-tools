@@ -5,7 +5,7 @@
     </div>
     {% assign elements_groups = include.apparel['items'] | group_by: "group" %}
     {% for elements_group in elements_groups %}
-    <div class="col-4 group-{{ elements_group['name'] }}">
+    <div class="col-12 col-lg-4 group-{{ elements_group['name'] }}">
         <h3 class="text-capitalize">{{ elements_group['name'] }}</h3>
         {% assign elements = elements_group['items'] | sort: "value" %}
         {% for element in elements %}
