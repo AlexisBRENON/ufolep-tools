@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-12 d-none d-print-block text-center">
+        <h2 class="text-capitalize">{{ apparel_group['name'] | downcase }}</h2>
+        <hr class="" />
+    </div>
+    {% assign elements_groups = include.apparel['items'] | group_by: "group" %}
+    {% for elements_group in elements_groups %}
+    <div class="col-4 group-{{ elements_group['name'] }}">
+        <h3 class="text-capitalize">{{ elements_group['name'] }}</h3>
+        {% assign elements = elements_group['items'] | sort: "value" %}
+        {% for element in elements %}
+        {%- include element.html max_value=max_value element=element -%}
+        {% endfor %}
+        <hr class="mt-1 mb-3" />
+    </div>
+    {% endfor %}
+</div>

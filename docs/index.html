@@ -35,25 +35,41 @@ title: Brochure GAM
 
 <hr class="my-3"/>
 
+{% assign apparel_groups = site.data.db | group_by: "agres" %}
 
 <div class="row justify-content-evenly">
-{% assign apparel_groups = site.data.db | group_by: "agres" %}
-{% for apparel_group in apparel_groups %}
-<div class="apparel-{{ apparel_group['name'] }} col-4 vstack">
-    <h2 class="text-capitalize">{{apparel_group["name"] | downcase}}</h2>
-    {% assign elements_groups = apparel_group["items"] | group_by: "group" %}
-    {% for elements_group in elements_groups %}
-    <div class="group-{{ elements_group['name'] }}">
-        <h3 class="text-capitalize">{{ elements_group['name'] }}</h3>
-        {% assign elements = elements_group['items'] | sort: "value" %}
-        {% for element in elements %}
-            {%- include element.html max_value=max_value element=element -%}
+    <nav class="d-flex d-lg-none d-print-none col-12 mb-3 nav nav-tabs" id="apparel-tab" role="tablist">
+        {% for apparel_group in apparel_groups %}
+        {% assign selected = forloop.first %}
+        {% assign apparel_slug = apparel_group['name'] | downcase | replace: ' ', '-' %}
+        <button class="text-capitalize nav-link {% if selected %}active{% endif %}" id="apparel-{{ apparel_slug }}-tab"
+            data-bs-toggle="tab" data-bs-target="#apparel-{{ apparel_slug }}" type="button" role="tab"
+            aria-controls="apparel-{{ apparel_slug }}" aria-selected="{{ selected }}">
+            {{ apparel_group['name'] | downcase }}
+        </button>
         {% endfor %}
-        {% unless forloop.last %}
-            <hr class="mt-1 mb-3"/>
-        {% endunless %}
+        </nav>
+
+        <nav class="d-none d-lg-flex align-self-start d-print-none col-lg-2 nav nav-pills" id="apparel-pill" role="tablist"
+            aria-orientation="vertical">
+            {% for apparel_group in apparel_groups %}
+            {% assign selected = forloop.first %}
+            {% assign apparel_slug = apparel_group['name'] | downcase | replace: ' ', '-' %}
+            <button class="text-capitalize w-100 nav-link {% if selected %}active{% endif %}"
+                id="apparel-{{ apparel_slug }}-pill" data-bs-toggle="pill" data-bs-target="#apparel-{{ apparel_slug }}"
+                type="button" role="tab" aria-controls="apparel-{{ apparel_slug }}" aria-selected="{{ selected }}">
+                {{ apparel_group['name'] | downcase }}
+            </button>
+        {% endfor %}
+    </nav>
+
+    <div class="col-12 col-lg-10 tab-content" id="apparel-nav-tabContent">
+        {% for apparel_group in apparel_groups %}
+        {% assign apparel_slug = apparel_group['name'] | downcase | replace: ' ', '-' %}
+        <div class="tab-pane fade {% if forloop.first %}show active{% endif %}" id="apparel-{{ apparel_slug }}"
+            role="tabpanel" aria-labelledby="apparel-{{ apparel_slug }}-tab apparel-{{ apparel_slug }}-pill" tabindex="0">
+            {%- include apparel.html apparel=apparel_group -%}
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-</div>
-{% endfor %}
 </div>
