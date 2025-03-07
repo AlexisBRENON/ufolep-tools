@@ -4,27 +4,35 @@
 {% assign element_drawing_url = "./assets/images/drawings/" | append: include.element['agres'] | append: "/" | append:
 element_padded_index | append: ".svg" %}
 
-<tr>
-    <td class="text-center align-content-center position-relative">
+<div class="row">
+    <div class="col-6 order-first col-lg-2 text-center align-content-center position-relative bg-body-tertiary"
+        style="min-height: 2lh;">
         <a class="stretched-link" href="#" data-bs-toggle="collapse"
             data-bs-target="#{{ element_id }}-collapse">
             <img src="./assets/images/sym/{{ include.element['agres'] }}/{{ element_padded_index }}.svg"
             class="m-auto object-fit-cover" loading="lazy"/>
         </a>
-        </td>
-    <td>"{{ element['description'] }}"</td>
-    <td class="table-magma-{{variant_index}}-12 text-end">{{ element['id'] }}</td>
-    </tr>
-    <tr class="collapse" id="{{ element_id }}-collapse">
-        <td colspan="3" class="text-center">
-            <a href="{{ element_drawing_url }}" target="_blank">
-                <img src="{{ element_drawing_url }}" class="w-75" loading="lazy" fetchpriority="low" />
-            </a>
-        </td>
-    </tr>
-    <!--
+    </div>
+    <div class="col-6 col-lg-1 order-lg-last bg-magma-{{variant_index}}-12-subtle text-center align-content-center px-lg-0">
+        <small class="d-lg-none">{{ element['id'] }}</small>
+        <small class="d-none d-lg-inline-block" style="transform: rotate(90deg);">{{ element['id'] }}</small>
+    </div>
+    <div class="col px-lg-0 align-content-center" style="min-height: 2lh;">
+        <form>
+            <select class=" form-select border-0 element-description">
             {% for label in element["short_names"] %}
-                <option {%if forloop.first %}selected{% endif %}>{{label}}</option>
+            <option {%if forloop.first %}selected{% endif %}>{{label}}</option>
             {% endfor %}
             <option>"{{ element['description'] }}"</option>
-    -->
+        </select>
+        </form>
+        </div>
+        </div>
+        
+        <div class="row collapse py-2" id="{{ element_id }}-collapse">
+            <div class="col text-center">
+                <a href="{{ element_drawing_url }}" target="_blank">
+                    <img src="{{ element_drawing_url }}" class="w-75" loading="lazy" fetchpriority="low" />
+                </a>
+            </div>
+        </div>

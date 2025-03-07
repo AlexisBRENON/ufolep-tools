@@ -1,3 +1,5 @@
+{% assign apparel_slug = include.apparel['name'] | downcase | replace: ' ', '-' %}
+
 <article class="row g-3">
     <div class="col-12 d-none d-print-block text-center">
         <h2 class="text-capitalize">{{ apparel_group['name'] | downcase }}</h2>
@@ -8,19 +10,18 @@
     {% assign elements = elements_group['items'] | sort: "value" %}
     <article class="col-4">
         <div class="card">
-            <header class="card-header">
-                <h3 class="text-capitalize">{{ elements_group['name'] }}</h3>
+            <header class="card-header bg-apparel-{{ apparel_slug }}-subtle">
+                <h3 class="mb-0 text-capitalize">{{ elements_group['name'] }}</h3>
             </header>
-            <table class="table mb-0">
-                <colgroup>
-                    <col style="width:20%">
-                    <col style="width:70%">
-                    <col style="width:10%">
-                </colgroup>
+            <div class="list-group list-group-flush">
                 {% for element in elements %}
-                {%- include element.html max_value=max_value element=element -%}
+                <div class="list-group-item p-0">
+                    <div class="container-fluid">
+                        {%- include element.html max_value=max_value element=element -%}
+                    </div>
+                    </div>
                 {% endfor %}
-            </table>
+            </div>
             <footer class="card-footer text-end">
                 <small class="text-body-secondary">{{ elements | size }} éléments</small>
             </footer>

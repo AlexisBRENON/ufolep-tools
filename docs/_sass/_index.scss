@@ -1,0 +1,16 @@
+#apparel-pill.nav-pills .nav-link.active {
+    @each $name, $color in $apparel-colors {
+        &##{$name}-pill {
+            @extend .text-bg-#{$name}
+        }
+    }
+}
+
+#apparel-tab.nav-tabs .nav-link.active {
+    @each $name, $color in $apparel-colors {
+        &##{$name}-tab {
+            @extend .border-#{$name};
+            @extend .border-bottom-0;
+        }
+    }
+}

@@ -31,13 +31,22 @@ $magmas: (
     "magma-11-12": #221150,
     "magma-12-12": #0c0926,
 );
+$apparel-colors: (
+    "apparel-sol": #fccf6e,
+    "apparel-arçons": #fff766,
+    "apparel-anneaux": #df5e9d,
+    "apparel-barres-parallèles": #a2debe,
+    "apparel-barre-fixe": #5fbfdc,
+);
 
-$theme-colors: map-merge($theme-colors, $magmas);
+$my-custom-colors: map-merge($map1: $magmas, $map2: $apparel-colors);
+
+$theme-colors: map-merge($theme-colors, $my-custom-colors);
 $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
 
-$theme-colors-text: map-merge($theme-colors-text, map-loop($magmas, shade-color, "$value", 60%));
-$theme-colors-bg-subtle: map-merge($theme-colors-bg-subtle, map-loop($magmas, tint-color, "$value", 80%));
-$theme-colors-border-subtle: map-merge($theme-colors-border-subtle, map-loop($magmas, tint-color, "$value", 60%));
+$theme-colors-text: map-merge($theme-colors-text, map-loop($my-custom-colors, shade-color, "$value", 60%));
+$theme-colors-bg-subtle: map-merge($theme-colors-bg-subtle, map-loop($my-custom-colors, tint-color, "$value", 80%));
+$theme-colors-border-subtle: map-merge($theme-colors-border-subtle, map-loop($my-custom-colors, tint-color, "$value", 60%));
 $utilities-border: map-merge($utilities-border, $theme-colors-rgb);
 $utilities-border-colors: map-merge($utilities-border-colors, map-loop($utilities-border, rgba-css-var, "$key", "border"));
 $tmp: (
@@ -48,7 +57,7 @@ $tmp: (
 }
 
 $utilities-bg-subtle: map-merge($utilities-bg-subtle, $tmp);
-$table-variants: map-merge($table-variants, map-loop($magmas, shift-color, "$value", $table-bg-scale));
+$table-variants: map-merge($table-variants, map-loop($my-custom-colors, shift-color, "$value", $table-bg-scale));
 
 @debug $utilities-bg-subtle;
 
@@ -97,3 +106,4 @@ $table-variants: map-merge($table-variants, map-loop($magmas, shift-color, "$val
 /* Custom SCSS */
 @import "bootstrap-4-jekyll/bootstrap-4-jekyll";
 @import "element";
+@import "index";
