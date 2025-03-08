@@ -11,44 +11,46 @@ title: Brochure GAM
     </p>
     <p>Cliquez sur le symbole d'un élément pour voir l'illustration.</p>
     {% assign max_value = site.data.db | map: "value" | sort | last | times: 10 | minus: 1 | round %}
-        <div class="row justify-content-start">
-            <label class="col-12 col-lg-auto col-form-label">Code couleur pour la valeur des éléments:</label>
-            <div class="col">
-                <div class="d-flex flex-row flex-wrap">
-{% for i in (0..max_value) %}
-{% assign variant_index = i | plus: 0.0 | divided_by: max_value | times: 12 | round %}
-                    <div class="mx-1 my-1 my-lg-0 py-1 alert alert-magma-{{variant_index}}-12">
-                        0,{{ i | plus: 1}}
-                    </div>
-                    {% endfor %}
-                    </div>
+    <div class="row justify-content-start">
+        <label class="col-12 col-lg-auto col-form-label">Code couleur pour la valeur des éléments:</label>
+        <div class="col">
+            <div class="d-flex flex-row flex-wrap">
+                {% for i in (0..max_value) %}
+                {% assign variant_index = i | plus: 0.0 | divided_by: max_value | times: 12 | round %}
+                <div class="mx-1 my-1 my-lg-0 py-1 alert alert-magma-{{variant_index}}-12">
+                    0,{{ i | plus: 1}}
+                </div>
+                {% endfor %}
             </div>
-            </div>
-            <p>Utilisez le menu déroulant de chaque élément pour choisir le text qui l'accompagne (texte de référence, ou noms
-                courts)</p>
+        </div>
+    </div>
+    <p>Utilisez le menu déroulant de chaque élément pour choisir le text qui l'accompagne (texte de référence, ou noms
+        courts)</p>
 </div>
 
 
 
-<hr class="my-3"/>
+<hr class="my-3" />
 
 {% assign apparel_groups = site.data.db | group_by: "agres" %}
 
 <div class="row justify-content-evenly">
-    <nav class="d-flex d-lg-none d-print-none col-12 mb-3 nav nav-tabs" id="apparel-tab" role="tablist">
-        {% for apparel_group in apparel_groups %}
-        {% assign selected = forloop.first %}
-        {% assign apparel_slug = apparel_group['name'] | downcase | replace: ' ', '-' %}
-        <button class="text-capitalize nav-link {% if selected %}active{% endif %}" id="apparel-{{ apparel_slug }}-tab"
-            data-bs-toggle="tab" data-bs-target="#apparel-{{ apparel_slug }}" type="button" role="tab"
-            aria-controls="apparel-{{ apparel_slug }}" aria-selected="{{ selected }}">
-            {{ apparel_group['name'] | downcase }}
-        </button>
-        {% endfor %}
+    <div class="d-flex d-lg-none d-print-none col-12 mb-3">
+        <nav class="nav nav-tabs flex-nowrap overflow-x-scroll overflow-y-hidden" id="apparel-tab" role="tablist">
+            {% for apparel_group in apparel_groups %}
+            {% assign selected = forloop.first %}
+            {% assign apparel_slug = apparel_group['name'] | downcase | replace: ' ', '-' %}
+            <button class="text-capitalize nav-link {% if selected %}active{% endif %}" id="apparel-{{ apparel_slug }}-tab"
+                data-bs-toggle="tab" data-bs-target="#apparel-{{ apparel_slug }}" type="button" role="tab"
+                aria-controls="apparel-{{ apparel_slug }}" aria-selected="{{ selected }}">
+                {{ apparel_group['name'] | downcase }}
+            </button>
+            {% endfor %}
         </nav>
+    </div>
 
-        <nav class="d-none d-lg-flex align-self-start d-print-none col-lg-2 nav nav-pills" id="apparel-pill" role="tablist"
-            aria-orientation="vertical">
+    <div class="d-none d-lg-flex align-self-start d-print-none col-lg-2">
+        <nav class="nav nav-pills" id="apparel-pill" role="tablist" aria-orientation="vertical">
             {% for apparel_group in apparel_groups %}
             {% assign selected = forloop.first %}
             {% assign apparel_slug = apparel_group['name'] | downcase | replace: ' ', '-' %}
@@ -57,14 +59,16 @@ title: Brochure GAM
                 type="button" role="tab" aria-controls="apparel-{{ apparel_slug }}" aria-selected="{{ selected }}">
                 {{ apparel_group['name'] | downcase }}
             </button>
-        {% endfor %}
-    </nav>
+            {% endfor %}
+            </nav>
+    </div>
 
     <div class="col tab-content" id="apparel-nav-tabContent">
         {% for apparel_group in apparel_groups %}
         {% assign apparel_slug = apparel_group['name'] | downcase | replace: ' ', '-' %}
         <div class="tab-pane fade {% if forloop.first %}show active{% endif %}" id="apparel-{{ apparel_slug }}"
-            role="tabpanel" aria-labelledby="apparel-{{ apparel_slug }}-tab apparel-{{ apparel_slug }}-pill" tabindex="0">
+            role="tabpanel" aria-labelledby="apparel-{{ apparel_slug }}-tab apparel-{{ apparel_slug }}-pill"
+            tabindex="0">
             {%- include apparel.html apparel=apparel_group -%}
         </div>
         {% endfor %}
