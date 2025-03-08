@@ -5,7 +5,7 @@
 element_padded_index | append: ".svg" %}
 
 <div class="row">
-    <div class="col-6 order-first col-lg-2 text-center align-content-center position-relative bg-body-tertiary"
+    <div class="col-2 text-center align-content-center position-relative bg-body-tertiary"
         style="min-height: 2lh;">
         <a class="stretched-link" href="#" data-bs-toggle="collapse"
             data-bs-target="#{{ element_id }}-collapse">
@@ -13,11 +13,7 @@ element_padded_index | append: ".svg" %}
             class="m-auto object-fit-cover" loading="lazy"/>
         </a>
     </div>
-    <div class="col-6 col-lg-1 order-lg-last bg-magma-{{variant_index}}-12-subtle text-center align-content-center px-lg-0">
-        <small class="d-lg-none">{{ element['id'] }}</small>
-        <small class="d-none d-lg-inline-block" style="transform: rotate(90deg);">{{ element['id'] }}</small>
-    </div>
-    <div class="col px-lg-0 align-content-center" style="min-height: 2lh;">
+    <div class="col px-0 align-content-center" style="min-height: 2lh;">
         <form>
             <select class=" form-select border-0 element-description">
             {% for label in element["short_names"] %}
@@ -27,8 +23,11 @@ element_padded_index | append: ".svg" %}
         </select>
         </form>
         </div>
+        <div class="col-1 bg-magma-{{variant_index}}-12-subtle text-center align-content-center px-0">
+            <small class="d-inline-block" style="transform: rotate(90deg);">{{ element['id'] }}</small>
         </div>
-        
+        </div>
+
         <div class="row collapse py-2" id="{{ element_id }}-collapse">
             <div class="col text-center">
                 <a href="{{ element_drawing_url }}" target="_blank">

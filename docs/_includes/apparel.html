@@ -8,7 +8,7 @@
     {% assign elements_groups = include.apparel['items'] | group_by: "group" %}
     {% for elements_group in elements_groups %}
     {% assign elements = elements_group['items'] | sort: "value" %}
-    <article class="col-12 col-lg-4">
+    <article class="col-12 col-sm-6 col-xl-4">
         <div class="card">
             <header class="card-header bg-apparel-{{ apparel_slug }}-subtle">
                 <h3 class="mb-0 text-capitalize">{{ elements_group['name'] }}</h3>

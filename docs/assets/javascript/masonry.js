@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
     const containers = document.querySelectorAll('.apparel-groups');
-    console.log(containers);
     containers.forEach((elem) => {
         var msnry = new Masonry(elem, {
             percentPosition: true
