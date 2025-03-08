@@ -4,12 +4,15 @@
     <h2 class="text-capitalize">{{ apparel_group['name'] | downcase }}</h2>
     <hr class="" />
 </div>
-<article class="row g-2 apparel-groups">
+<article class="row g-2" data-colcade="columns: .col-12, items: article.card">
+    <div class="col-12 d-none d-print-block"></div>
+    <div class="col-12 col-sm-6 col-xl-4 d-print-none"></div>
+    <div class="col-12 col-sm-6 col-xl-4 d-print-none d-none d-sm-block"></div>
+    <div class="col-12 col-sm-6 col-xl-4 d-print-none d-none d-xl-block"></div>
     {% assign elements_groups = include.apparel['items'] | group_by: "group" %}
     {% for elements_group in elements_groups %}
     {% assign elements = elements_group['items'] | sort: "value" %}
-    <article class="col-12 col-sm-6 col-xl-4">
-        <div class="card">
+    <article class="card mb-2">
             <header class="card-header bg-apparel-{{ apparel_slug }}-subtle">
                 <h3 class="mb-0 text-capitalize">{{ elements_group['name'] }}</h3>
             </header>
@@ -25,7 +28,6 @@
             <footer class="card-footer text-end">
                 <small class="text-body-secondary">{{ elements | size }} éléments</small>
             </footer>
-        </div>
     </article>
     {% endfor %}
 </article>
