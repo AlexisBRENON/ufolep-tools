@@ -28,7 +28,16 @@ title: Brochure GAM
         courts)</p>
 </div>
 
-
+<p class="d-inline-flex gap-1" id="level-button-group">
+    <input type="radio" class="btn-check" name="radio-level" id="all" autocomplete="off" data-filter="all" checked>
+    <label class="btn btn-outline-primary" for="all">Tous</label>
+    {% for i in (0..1) %}
+    {% assign level = 6 | minus: i %}
+    <input type="radio" class="btn-check" name="radio-level" id="n{{ level }}" autocomplete="off"
+        data-filter="n{{level}}">
+    <label class="btn btn-outline-primary" for="n{{ level }}">N{{ level }}</label>
+    {% endfor %}
+</p>
 
 <hr class="my-3" />
 

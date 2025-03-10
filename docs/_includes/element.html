@@ -4,6 +4,7 @@
 {% assign element_drawing_url = "./assets/images/drawings/" | append: include.element['agres'] | append: "/" | append:
 element_padded_index | append: ".svg" %}
 
+<div class="element collapse show" data-ufolep-value="{{ element['value'] }}">
 <div class="row">
     <div class="col-2 text-center align-content-center position-relative bg-body-tertiary"
         style="min-height: 2lh;">
@@ -36,3 +37,4 @@ element_padded_index | append: ".svg" %}
                 </a>
             </div>
         </div>
+    </div>
