@@ -17,9 +17,9 @@ element_padded_index | append: ".svg" %}
         <form>
             <select class=" form-select border-0 element-description">
             {% for label in element["short_names"] %}
-            <option {%if forloop.first %}selected{% endif %}>{{label}}</option>
+            <option {%if forloop.first %}selected{% endif %}>{{label}}*</option>
             {% endfor %}
-            <option>"{{ element['description'] }}"</option>
+            <option>{{ element['description'] }}</option>
         </select>
         </form>
         </div>
@@ -30,6 +30,7 @@ element_padded_index | append: ".svg" %}
 
         <div class="row collapse py-2" id="{{ element_id }}-collapse">
             <div class="col text-center">
+                <p class="font-monospace">{{ element['description'] }}</p>
                 <a href="{{ element_drawing_url }}" target="_blank">
                     <img src="{{ element_drawing_url }}" class="w-75" loading="lazy" fetchpriority="low" />
                 </a>
