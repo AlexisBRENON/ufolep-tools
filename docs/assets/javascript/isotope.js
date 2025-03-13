@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         {% for item in site.data.db['levels'] %}
         {{ item[0] }}: function (itemElem) {
-            if (itemElem.attributes['data-ufolep-level'] && (itemElem.attributes['data-ufolep-level'].value == "{{ item[0] }}")) {
+            if (itemElem.getAttribute('data-ufolep-level') == "{{ item[0] }}") {
                 return true;
             }
-            var value = parseFloat(itemElem.attributes['data-ufolep-value'] && itemElem.attributes['data-ufolep-value'].value);
+            var value = parseFloat(itemElem.getAttribute('data-ufolep-value'));
             return {{ item[1].value_range[0] }} <= value && value <= {{ item[1].value_range[1] }};
         },
         {% endfor %}
@@ -22,14 +22,13 @@ collapseElementList = [...document.querySelectorAll('*[data-ufolep-level], *[dat
 
 
     // bind filter button click
-    var filtersElem = document.querySelectorAll('#level-button-group > input');
+    var filtersElem = document.querySelectorAll('a[data-filter]');
     filtersElem.forEach(function (btn) {
         btn.addEventListener('click', function (event) {
-            var filterValue = event.target.getAttribute('data-filter');
-            // use matching filter function
-            filterValue = filterFns[filterValue];
+            event.target.closest("article").classList.toggle("d-print-none");
+            var activeFilters = Array.from(filtersElem).filter(elem => !! (elem.getAttribute("aria-pressed") == "true") ).map(elem => filterFns[elem.getAttribute('data-filter')])
             collapseElementList.forEach(function (collapse) {
-                if (filterValue(collapse._element)) {
+                if (activeFilters.some(fn => fn(collapse._element))) {
                     collapse.show()
                 } else {
                     collapse.hide()

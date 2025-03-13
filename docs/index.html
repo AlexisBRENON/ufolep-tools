@@ -29,36 +29,31 @@ title: Brochure GAM
         courts)</p>
 </div>
 
-<p class="d-inline-flex d-print-none gap-1" id="level-button-group">
-    <input type="radio" class="btn-check" name="radio-level" id="all" autocomplete="off" data-filter="all" checked>
-    <label class="btn btn-outline-primary" for="all">Tous</label>
-    {% for item in site.data.db['levels'] %}
-    <input type="radio" class="btn-check" name="radio-level" id="{{ item[0] }}" autocomplete="off"
-        data-filter="{{ item[0] }}">
-    <label class="btn btn-outline-primary" for="{{ item[0] }}">{{ item[0] }}</label>
-    {% endfor %}
-</p>
+{% assign num_levels = site.data.db['levels'] | size | minus: 1.0 %}
 
-<div class="row">
-    <div class="col text-center">
-        <h2>Décomposition de la note de départ</h2>
+<div class="row g-3">
+    <div class="col-12 text-center">
+        <h2>
+            Décomposition de la note de départ
+        </h2>
+        <small class="text-body-secondary">Cliquez sur les niveaux à afficher</small>
     </div>
-</div>
-<div class="row">
-    {% assign num_levels = site.data.db['levels'] | size | minus: 1.0 %}
+
     {% for item in site.data.db['levels'] %}
     <div class="col">
-        <article class="card collapse show" role="alert" data-ufolep-level="{{ item[0] }}">
+        <article class="card">
             <header
-                class="card-header text-center bg-magma-{{ forloop.index0 | divided_by: num_levels | times: 12 | round }}-12-subtle">
-                <h3 class="mb-0">{{ item[0] }}</h3>
+                class="card-header text-center bg-magma-{{ forloop.index0 | divided_by: num_levels | times: 12 | round }}-12-subtle position-relative">
+                <a class="stretched-link text-body text-decoration-none active" href="#" data-filter="{{ item[0] }}" role="button" data-bs-toggle="button" aria-pressed="true">
+                    <h3 class="mb-0">{{ item[0] }}</h3>
+                </a>
             </header>
 
-            <dl class="list-group list-group-flush">
+            <dl class="list-group list-group-flush collapse show" data-ufolep-level="{{ item[0] }}">
                 <div class="list-group-item">
-                    <div class="row">
-                        <dt class="col-4 text-end">Difficulté:</dt>
-                        <dd class="col-8 mb-0">{{ item[1].value_range[0] }} - {{ item[1].value_range[1] }} (max: {{
+                    <div class="row g-2">
+                        <dt class="col-6 text-end">Difficulté:</dt>
+                        <dd class="col-6 mb-0">{{ item[1].value_range[0] }} - {{ item[1].value_range[1] }} (≤ {{
                             item[1].diff
                             }})
                         </dd>
@@ -66,21 +61,21 @@ title: Brochure GAM
                 </div>
 
                 <div class="list-group-item">
-                    <div class="row">
-                        <dt class="col-4 text-end">Execution:</dt>
-                        <dd class="col-8 mb-0">{{ item[1].exec }}</dd>
+                    <div class="row g-2">
+                        <dt class="col-6 text-end">Execution:</dt>
+                        <dd class="col-6 mb-0">{{ item[1].exec }}</dd>
                     </div>
                 </div>
 
                 <div class="list-group-item">
-                    <div class="row">
-                        <dt class="col-4 text-end">ES:</dt>
-                        <dd class="col-8 mb-0">5.5</dd>
+                    <div class="row g-2">
+                        <dt class="col-6 text-end">ES:</dt>
+                        <dd class="col-6 mb-0">5.5</dd>
                     </div>
                 </div>
             </dl>
-            <footer class="card-footer text-end">
-                Note de départ maximale: {{ item[1].diff | plus: item[1].exec | plus: 5.5 }}
+            <footer class="card-footer text-end collapse show" data-ufolep-level="{{ item[0] }}">
+                Maximum: {{ item[1].diff | plus: item[1].exec | plus: 5.5 }}
             </footer>
         </article>
     </div>
