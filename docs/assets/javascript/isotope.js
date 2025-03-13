@@ -1,20 +1,24 @@
+---
+---
+
 document.addEventListener('DOMContentLoaded', function () {
     // filter functions
     var filterFns = {
         all: function (itemElem) {
             return true;
         },
-        n6: function (itemElem) {
-            value = parseFloat(itemElem.attributes['data-ufolep-value'] && itemElem.attributes['data-ufolep-value'].value)
-            return value < 0.4
+        {% for item in site.data.db['levels'] %}
+        {{ item[0] }}: function (itemElem) {
+            if (itemElem.attributes['data-ufolep-level'] && (itemElem.attributes['data-ufolep-level'].value == "{{ item[0] }}")) {
+                return true;
+            }
+            var value = parseFloat(itemElem.attributes['data-ufolep-value'] && itemElem.attributes['data-ufolep-value'].value);
+            return {{ item[1].value_range[0] }} <= value && value <= {{ item[1].value_range[1] }};
         },
-        n5: function (itemElem) {
-            value = parseFloat(itemElem.attributes['data-ufolep-value'] && itemElem.attributes['data-ufolep-value'].value)
-            return value > 0.1 && value < 0.5
-        }
+        {% endfor %}
     };
 
-    collapseElementList = [...document.querySelectorAll('.element[data-ufolep-value')].map(collapseEl => new bootstrap.Collapse(collapseEl, { toggle: false }));
+collapseElementList = [...document.querySelectorAll('*[data-ufolep-level], *[data-ufolep-value]')].map(collapseEl => new bootstrap.Collapse(collapseEl, { toggle: false }));
 
 
     // bind filter button click

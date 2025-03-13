@@ -1,4 +1,129 @@
-[
+{
+    "levels": {
+        "N6": {
+            "value_range": [
+                0.1,
+                0.2
+            ],
+            "diff": 0.9,
+            "exec": 6,
+            "ES": {
+                "SOL": [
+                    "Un élément en appui, maintien ou force",
+                    "Un élément de souplesse (≥ 0.1) - Bonus",
+                    "Un élément en avant",
+                    "Un élément en arrière",
+                    "Un élément en saut, tour ou cercle"
+                ],
+                "ARÇONS": [
+                    "Un élan d'une jambe",
+                    "Un élan d'une jambe (≥ 0.2)",
+                    "Un transport",
+                    "Un élément ≥ 0.2 - Bonus",
+                    "Une sortie"
+                ],
+                "ANNEAUX": [
+                    "Un établissement à l'appui",
+                    "Un élément des appuis renversés",
+                    "Enchainer 2 balancés complets",
+                    "Un élément de force ou maintien (≥ 0.1) - Bonus",
+                    "Une sortie"
+                ],
+                "BARRES PARALLÈLES": [
+                    "Enchainer 2 balancés complets",
+                    "Un élément en 0.2 min.",
+                    "Un élément de maintiens-forces (≥ 0.1) - Bonus",
+                    "Enchainer balancés en suspension av+ar+av (ou inversement)",
+                    "Une sortie"
+                ],
+                "BARRE FIXE": [
+                    "Enchainer 2 balancés complets",
+                    "Un élément ≥ 0.1 - Bonus",
+                    "Un changement de face",
+                    "Un élément près de la barre",
+                    "Une sortie"
+                ]
+            }
+        },
+        "N5": {
+            "value_range": [
+                0.1,
+                0.3
+            ],
+            "diff": 1.4,
+            "exec": 6,
+            "ES": {
+                "SOL": [
+                    "Un élément en appui, maintien ou force (≥ 0.2)",
+                    "Un élément de souplesse (≥ 0.2) ou Y - Bonus",
+                    "Un élément avec envol en avant (≥ 0.3)",
+                    "Un élément avec envol en arrière (≥ 0.3)",
+                    "Un élément en saut, tour ou cercle (≥ 0.2)"
+                ],
+                "ARÇONS": [
+                    "Un élan d'une jambe (≥ 0.3)",
+                    "Un élément des cercles (≥ 0.2) - Bonus",
+                    "Un transport (≥ 0.2)",
+                    "Un élément ≥ 0.2",
+                    "Une sortie (≥ 0.2)"
+                ],
+                "ANNEAUX": [
+                    "Un élément ≥ 0.2 - Bonus",
+                    "Un élément des appuis renversés (≥ 0.2)",
+                    "Enchainer 2 balancés complets",
+                    "Un élément de force ou maintien (≥ 0.2)",
+                    "Une sortie (≥ 0.2)"
+                ],
+                "BARRES PARALLÈLES": [
+                    "Enchainer 2 balancés complets",
+                    "Un élan à l'appui brachial (≥ 0.2)",
+                    "Un élément de maintiens-forces (≥ 0.2)",
+                    "Un élan en suspension (≥ 0.2)",
+                    "Une sortie (≥ 0.2)"
+                ],
+                "BARRE FIXE": [
+                    "Enchainer 2 balancés complets",
+                    "Un élément ≥ 0.3",
+                    "Un changement de face",
+                    "Un élément près de la barre (≥ 0.2)",
+                    "Une sortie (≥ 0.2) - Bonus"
+                ]
+            }
+        },
+        "N4": {
+            "value_range": [
+                0.2,
+                0.4
+            ],
+            "diff": 1.9,
+            "exec": 6
+        },
+        "N3": {
+            "value_range": [
+                0.3,
+                0.5
+            ],
+            "diff": 2.4,
+            "exec": 6
+        },
+        "N2": {
+            "value_range": [
+                0.3,
+                1.0
+            ],
+            "diff": 2.9,
+            "exec": 6
+        },
+        "N1": {
+            "value_range": [
+                0.3,
+                1.0
+            ],
+            "diff": 3.4,
+            "exec": 6
+        }
+    },
+    "elements": [
     {
         "agres": "SOL",
         "group": "appui, maintien ou force",
@@ -141,7 +266,7 @@
         "agres": "SOL",
         "group": "appui, maintien ou force",
         "id": 22,
-        "description": "Monter à l'ATR tenu 2\" jambes serrées bras tendus ou corps tendu bras échis",
+        "description": "Monter à l'ATR tenu 2\" jambes serrées bras tendus ou corps tendu bras fléchis",
         "value": 0.5
     },
     {
@@ -799,7 +924,7 @@
         "agres": "SOL",
         "group": "saut, tour ou cercle",
         "id": 163,
-        "description": "Facial russe 720° ou plusConception-illustrations www.acrostiche.com ",
+        "description": "Facial russe 720° ou plus",
         "value": 0.6
     },
     {
@@ -1272,7 +1397,7 @@
         "agres": "ARÇONS",
         "group": "changement de face",
         "id": 110,
-        "description": "Stöckli inversé avec ou sans arçonsConception-illustrations www.acrostiche.com",
+        "description": "Stöckli inversé avec ou sans arçons",
         "value": 0.5
     },
     {
@@ -1434,7 +1559,7 @@
         "agres": "ANNEAUX",
         "group": "établissement à l'appui en élan ou en force",
         "id": 10,
-        "description": "Bascule dorsale bras échis à l'appui",
+        "description": "Bascule dorsale bras fléchis à l'appui",
         "value": 0.4
     },
     {
@@ -1938,15 +2063,21 @@
         "agres": "ANNEAUX",
         "group": "élans",
         "id": 104,
-        "description": "Elan avant corps tendu à l'ATR (soleil)",
-        "value": 0.5
+        "description": "Elan avant corps tendu à l'ATR",
+        "value": 0.5,
+        "short_names": [
+            "Soleil"
+        ]
     },
     {
         "agres": "ANNEAUX",
         "group": "élans",
         "id": 105,
-        "description": "Elan arrière corps tendu à l'ATR (lune)",
-        "value": 0.5
+        "description": "Elan arrière corps tendu à l'ATR",
+        "value": 0.5,
+        "short_names": [
+            "Lune"
+        ]
     },
     {
         "agres": "ANNEAUX",
@@ -1966,14 +2097,14 @@
         "agres": "ANNEAUX",
         "group": "élans",
         "id": 108,
-        "description": "Eélan arrière corps tendu à l'ATR tenu 2\"",
+        "description": "Élan arrière corps tendu à l'ATR tenu 2\"",
         "value": 0.6
     },
     {
         "agres": "ANNEAUX",
         "group": "appuis renversés",
         "id": 109,
-        "description": "Placement du dos tenu 2\" jambes tendues bras échis",
+        "description": "Placement du dos tenu 2\" jambes tendues bras fléchis",
         "value": 0.1
     },
     {
@@ -1981,13 +2112,16 @@
         "group": "appuis renversés",
         "id": 112,
         "description": "Position verticale en appui",
-        "value": 0.2
+        "value": 0.2,
+        "short_names": [
+            "Trépied"
+        ]
     },
     {
         "agres": "ANNEAUX",
         "group": "appuis renversés",
         "id": 116,
-        "description": "ATR bras échis tenu 2\" (épaules au niveau supérieur des anneaux) ",
+        "description": "ATR bras fléchis tenu 2\" (épaules au niveau supérieur des anneaux)",
         "value": 0.3,
         "short_names": [
             "Bougie"
@@ -2004,14 +2138,14 @@
         "agres": "ANNEAUX",
         "group": "appuis renversés",
         "id": 118,
-        "description": "Monter en force corps cassé, jambes écartées, bras échis à l'ATR tenu 2\"",
+        "description": "Monter en force corps cassé, jambes écartées, bras fléchis à l'ATR tenu 2\"",
         "value": 0.4
     },
     {
         "agres": "ANNEAUX",
         "group": "appuis renversés",
         "id": 121,
-        "description": "Monter en force corps cassé, jambes serrées, bras échis à l'ATR tenu 2\"",
+        "description": "Monter en force corps cassé, jambes serrées, bras fléchis à l'ATR tenu 2\"",
         "value": 0.5
     },
     {
@@ -2208,7 +2342,7 @@
         "agres": "ANNEAUX",
         "group": "sorties",
         "id": 160,
-        "description": "Salto avant carpé ou tendu avec 1/1 ou +Conception-illustrations www.acrostiche.com ",
+        "description": "Salto avant carpé ou tendu avec 1/1 ou +",
         "value": 0.6
     },
     {
@@ -2641,7 +2775,7 @@
         "agres": "BARRES PARALLÈLES",
         "group": "élan à l'appui brachial",
         "id": 74,
-        "description": "Établissement arrière avec 1/2 tour et passer les jambes écartée à l'appui ou appui brachialConception-illustrations www.acrostiche.com",
+        "description": "Établissement arrière avec 1/2 tour et passer les jambes écartée à l'appui ou appui brachial",
         "value": 0.6
     },
     {
@@ -2963,7 +3097,7 @@
         "agres": "BARRES PARALLÈLES",
         "group": "maintiens-forces",
         "id": 135,
-        "description": "Monter en force à l'ATR tenue 2\" bras tendus jambes écartées ou bras échis jambes serrées",
+        "description": "Monter en force à l'ATR tenue 2\" bras tendus jambes écartées ou bras fléchis jambes serrées",
         "value": 0.4
     },
     {
@@ -2987,7 +3121,7 @@
         "agres": "BARRES PARALLÈLES",
         "group": "maintiens-forces",
         "id": 138,
-        "description": "Monter en force à l'ATR tenu 2\" bras tendus jambes tendues ou bras échis corps tendu",
+        "description": "Monter en force à l'ATR tenu 2\" bras tendus jambes tendues ou bras fléchis corps tendu",
         "value": 0.5
     },
     {
@@ -3628,7 +3762,7 @@
         "agres": "BARRE FIXE",
         "group": "changement de face",
         "id": 78,
-        "description": "Etablissement arrière en prise cubitale et sauté en prise palmaire ou avec 1/2 tourConception-illustrations www.acrostiche.com",
+        "description": "Etablissement arrière en prise cubitale et sauté en prise palmaire ou avec 1/2 tour",
         "value": 0.5
     },
     {
@@ -4065,3 +4199,4 @@
         "value": 0.6
     }
 ]
+}

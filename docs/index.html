@@ -7,10 +7,10 @@ title: Brochure GAM
 <div class="alert alert-secondary" role="alert">
     <p> Conception et illustrations originale: www.accrostiche.com</p>
     <p> Vous pouvez télécharger les données:
-        <a href="{{ " assets/db.json" | relative_url }}" target="_blank">db.json</a>.
+        <a href="{{ 'assets/db.json' | relative_url }}" target="_blank">db.json</a>.
     </p>
     <p>Cliquez sur le symbole d'un élément pour voir l'illustration.</p>
-    {% assign max_value = site.data.db | map: "value" | sort | last | times: 10 | minus: 1 | round %}
+    {% assign max_value = site.data.db.elements | map: "value" | sort | last | times: 10 | minus: 1 | round %}
     <div class="row justify-content-start">
         <label class="col-12 col-lg-auto col-form-label">Code couleur pour la valeur des éléments:</label>
         <div class="col">
@@ -31,17 +31,64 @@ title: Brochure GAM
 <p class="d-inline-flex gap-1" id="level-button-group">
     <input type="radio" class="btn-check" name="radio-level" id="all" autocomplete="off" data-filter="all" checked>
     <label class="btn btn-outline-primary" for="all">Tous</label>
-    {% for i in (0..1) %}
-    {% assign level = 6 | minus: i %}
-    <input type="radio" class="btn-check" name="radio-level" id="n{{ level }}" autocomplete="off"
-        data-filter="n{{level}}">
-    <label class="btn btn-outline-primary" for="n{{ level }}">N{{ level }}</label>
+    {% for item in site.data.db['levels'] %}
+    <input type="radio" class="btn-check" name="radio-level" id="{{ item[0] }}" autocomplete="off"
+        data-filter="{{ item[0] }}">
+    <label class="btn btn-outline-primary" for="{{ item[0] }}">{{ item[0] }}</label>
     {% endfor %}
 </p>
 
+<div class="row">
+    <div class="col text-center">
+        <h2>Décomposition de la note de départ</h2>
+    </div>
+</div>
+<div class="row">
+    {% assign num_levels = site.data.db['levels'] | size | minus: 1.0 %}
+    {% for item in site.data.db['levels'] %}
+    <div class="col">
+        <article class="card collapse show" role="alert" data-ufolep-level="{{ item[0] }}">
+            <header
+                class="card-header text-center bg-magma-{{ forloop.index0 | divided_by: num_levels | times: 12 | round }}-12-subtle">
+                <h3 class="mb-0">{{ item[0] }}</h3>
+            </header>
+
+            <dl class="list-group list-group-flush">
+                <div class="list-group-item">
+                    <div class="row">
+                        <dt class="col-4 text-end">Difficulté:</dt>
+                        <dd class="col-8 mb-0">{{ item[1].value_range[0] }} - {{ item[1].value_range[1] }} (max: {{
+                            item[1].diff
+                            }})
+                        </dd>
+                    </div>
+                </div>
+
+                <div class="list-group-item">
+                    <div class="row">
+                        <dt class="col-4 text-end">Execution:</dt>
+                        <dd class="col-8 mb-0">{{ item[1].exec }}</dd>
+                    </div>
+                </div>
+
+                <div class="list-group-item">
+                    <div class="row">
+                        <dt class="col-4 text-end">ES:</dt>
+                        <dd class="col-8 mb-0">5.5</dd>
+                    </div>
+                </div>
+            </dl>
+            <footer class="card-footer text-end">
+                Note de départ maximale: {{ item[1].diff | plus: item[1].exec | plus: 5.5 }}
+            </footer>
+        </article>
+    </div>
+    {% endfor %}
+</div>
+
 <hr class="my-3" />
 
-{% assign apparel_groups = site.data.db | group_by: "agres" %}
+{% assign apparel_groups = site.data.db['elements'] | group_by: "agres" %}
 
 <div class="row justify-content-evenly">
     <div class="d-flex d-lg-none d-print-none col-12 mb-3">
@@ -69,7 +116,7 @@ title: Brochure GAM
                 {{ apparel_group['name'] | downcase }}
             </button>
             {% endfor %}
-            </nav>
+        </nav>
     </div>
 
     <div class="col tab-content" id="apparel-nav-tabContent">
