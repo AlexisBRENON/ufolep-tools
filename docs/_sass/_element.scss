@@ -7,6 +7,12 @@ select.element-description {
         text-wrap-mode: wrap;
     }
 }
+@media print {
+    select.element-description {
+        background: none;
+        padding-right: $form-select-padding-x;
+    }
+}
 
 
 .input-group-text {

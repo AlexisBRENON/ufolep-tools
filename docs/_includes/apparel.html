@@ -5,7 +5,7 @@
     <hr class="" />
 </div>
 <article class="row g-2" data-colcade="columns: .col-12, items: article.card">
-    <div class="col-12 d-none d-print-block"></div>
+    <div class="col-12 d-none d-print-block" style="columns: 20rem; column-fill: auto;"></div>
     <div class="col-12 col-sm-6 col-xl-4 d-print-none"></div>
     <div class="col-12 col-sm-6 col-xl-4 d-print-none d-none d-sm-block"></div>
     <div class="col-12 col-sm-6 col-xl-4 d-print-none d-none d-xl-block"></div>
@@ -13,19 +13,19 @@
     {% for elements_group in elements_groups %}
     {% assign elements = elements_group['items'] | sort: "value" %}
     <article class="card mb-2">
-            <header class="card-header bg-apparel-{{ apparel_slug }}-subtle">
+            <header class="card-header bg-apparel-{{ apparel_slug }}-subtle" style="break-after: avoid;">
                 <h3 class="mb-0 text-capitalize">{{ elements_group['name'] }}</h3>
             </header>
             <div class="list-group list-group-flush">
                 {% for element in elements %}
-                <div class="list-group-item p-0">
+                <div class="list-group-item p-0" style="break-inside: avoid;">
                     <div class="container-fluid">
                         {%- include element.html max_value=max_value element=element -%}
                     </div>
                 </div>
                 {% endfor %}
             </div>
-            <footer class="card-footer text-end">
+            <footer class="card-footer text-end" style="break-before: avoid;">
                 <small class="text-body-secondary">{{ elements | size }} éléments</small>
             </footer>
     </article>
