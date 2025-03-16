@@ -18,7 +18,14 @@ document.addEventListener('DOMContentLoaded', function () {
         {% endfor %}
     };
 
-collapseElementList = [...document.querySelectorAll('*[data-ufolep-level], *[data-ufolep-value]')].map(collapseEl => new bootstrap.Collapse(collapseEl, { toggle: false }));
+
+    collapseElementList = [...document.querySelectorAll('*[data-ufolep-level], *[data-ufolep-value]')].map(collapseEl => new bootstrap.Collapse(collapseEl, { toggle: false }));
+
+    document.querySelectorAll(`[data-entanglement-name]`).forEach(function (elem) {
+        elem.addEventListener('click', function (event) {
+            document.querySelector(`#${event.target.getAttribute("data-entanglement-name")}`).click();
+        });
+    });
 
 
     // bind filter button click

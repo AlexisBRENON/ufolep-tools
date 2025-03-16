@@ -1,8 +1,37 @@
 {% assign apparel_slug = include.apparel['name'] | downcase | replace: ' ', '-' %}
+{% assign num_levels = site.data.db['levels'] | size | minus: 1.0 %}
+
 
 <div class="col-12 d-none d-print-block text-center">
     <h2 class="text-capitalize">{{ apparel_group['name'] | downcase }}</h2>
     <hr class="" />
+</div>
+<div class="row mb-3">
+    <div class="col-12" style="column-count: {{ num_levels | plus: 1 | round }}; column-fill: balance;">
+        {% for item in site.data.db['levels'] %}
+        <article class="card mb-1" style="break-inside: avoid;">
+            <header
+                class="card-header text-center bg-magma-{{ forloop.index0 | divided_by: num_levels | times: 12 | round }}-12-subtle position-relative">
+                <a class="stretched-link text-body text-decoration-none active" href="#"
+                    data-entanglement-name="{{ item[0] }}-toggle" title="Cliquez pour masquer les éléments">
+                    <h3 class="mb-0">{{ item[0] }}</h3>
+                </a>
+            </header>
+
+            <ol class="list-group list-group-flush collapse show" type="I" data-ufolep-level="{{ item[0] }}">
+                {% for es in item[1].ES[include.apparel['name']] %}
+                <li class="list-group-item">
+                    {{ es | replace: '- Bonus', '' }}
+                </li>
+                {% endfor %}
+            </ol>
+
+            <footer class="card-footer text-end collapse show" data-ufolep-level="{{ item[0] }}">
+                Max: {{ item[1].diff }} + {{ item[1].exec }} + 5.5 = {{ item[1].diff | plus: item[1].exec | plus: 5.5 }}
+            </footer>
+        </article>
+        {% endfor %}
+    </div>
 </div>
 <article class="row g-2" data-colcade="columns: .col-12, items: article.card">
     <div class="col-12 d-none d-print-block" style="columns: 20rem; column-fill: auto;"></div>

@@ -3,6 +3,13 @@ layout: page
 title: Brochure GAM
 ---
 
+<div class="d-none" id="toggles">
+    {% for item in site.data.db['levels'] %}
+    <a class="active" aria-pressed="true" href="#" id="{{ item[0] }}-toggle" role="button" data-bs-toggle="button"
+        data-filter="{{ item[0] }}">{{ item[0] }}</a>
+    {% endfor %}
+</div>
+
 
 <div class="alert alert-secondary" role="alert">
     <p class="d-print-none"> Conception et illustrations originale: www.acrostiche.com</p>
@@ -29,58 +36,6 @@ title: Brochure GAM
         courts)</p>
 </div>
 
-{% assign num_levels = site.data.db['levels'] | size | minus: 1.0 %}
-
-<div class="row g-3">
-    <div class="col-12 text-center">
-        <h2>
-            Décomposition de la note de départ
-        </h2>
-        <small class="text-body-secondary">Cliquez sur les niveaux à afficher</small>
-    </div>
-
-    {% for item in site.data.db['levels'] %}
-    <div class="col">
-        <article class="card">
-            <header
-                class="card-header text-center bg-magma-{{ forloop.index0 | divided_by: num_levels | times: 12 | round }}-12-subtle position-relative">
-                <a class="stretched-link text-body text-decoration-none active" href="#" data-filter="{{ item[0] }}" role="button" data-bs-toggle="button" aria-pressed="true">
-                    <h3 class="mb-0">{{ item[0] }}</h3>
-                </a>
-            </header>
-
-            <dl class="list-group list-group-flush collapse show" data-ufolep-level="{{ item[0] }}">
-                <div class="list-group-item">
-                    <div class="row g-2">
-                        <dt class="col-6 text-end">Difficulté:</dt>
-                        <dd class="col-6 mb-0">{{ item[1].value_range[0] }} - {{ item[1].value_range[1] }} (≤ {{
-                            item[1].diff
-                            }})
-                        </dd>
-                    </div>
-                </div>
-
-                <div class="list-group-item">
-                    <div class="row g-2">
-                        <dt class="col-6 text-end">Execution:</dt>
-                        <dd class="col-6 mb-0">{{ item[1].exec }}</dd>
-                    </div>
-                </div>
-
-                <div class="list-group-item">
-                    <div class="row g-2">
-                        <dt class="col-6 text-end">ES:</dt>
-                        <dd class="col-6 mb-0">5.5</dd>
-                    </div>
-                </div>
-            </dl>
-            <footer class="card-footer text-end collapse show" data-ufolep-level="{{ item[0] }}">
-                Maximum: {{ item[1].diff | plus: item[1].exec | plus: 5.5 }}
-            </footer>
-        </article>
-    </div>
-    {% endfor %}
-</div>
 
 <hr class="my-3" />
 
