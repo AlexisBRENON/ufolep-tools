@@ -24,14 +24,15 @@ element_padded_index | append: ".svg" %}
         </select>
         </form>
         </div>
-        <div class="col-1 bg-magma-{{variant_index}}-12-subtle text-center align-content-center px-0">
+        <div class="col-1 bg-magma-{{variant_index}}-12-subtle text-center align-content-center px-0"
+            title="Val. {{ element['value'] }}">
             <small class="d-inline-block" style="transform: rotate(90deg);">{{ element['id'] }}</small>
         </div>
         </div>
 
-        <div class="row collapse py-2" id="{{ element_id }}-collapse">
+        <div class="row collapse py-2 g-2" id="{{ element_id }}-collapse">
             <div class="col text-center">
-                <p class="font-monospace">{{ element['description'] }}</p>
+                <p class="font-monospace">{{ element['value'] }} - {{ element['description'] }}</p>
                 <a href="{{ element_drawing_url }}" target="_blank">
                     <img src="{{ element_drawing_url }}" class="w-75" loading="lazy" fetchpriority="low" />
                 </a>

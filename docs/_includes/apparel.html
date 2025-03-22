@@ -6,10 +6,10 @@
     <h2 class="text-capitalize">{{ apparel_group['name'] | downcase }}</h2>
     <hr class="" />
 </div>
-<div class="row mb-3">
-    <div class="col-12" style="column-count: {{ num_levels | plus: 1 | round }}; column-fill: balance;">
-        {% for item in site.data.db['levels'] %}
-        <article class="card mb-1" style="break-inside: avoid;">
+<div class="row g-2 mb-3">
+    {% for item in site.data.db['levels'] %}
+    <div class="col-12 col-md-6 col-lg-4 col-xl-2">
+        <article class="card mb-1">
             <header
                 class="card-header text-center bg-magma-{{ forloop.index0 | divided_by: num_levels | times: 12 | round }}-12-subtle position-relative">
                 <a class="stretched-link text-body text-decoration-none active" href="#"
@@ -26,12 +26,13 @@
                 {% endfor %}
             </ol>
 
-            <footer class="card-footer text-end collapse show" data-ufolep-level="{{ item[0] }}">
+            <footer class="card-footer text-end collapse show" data-ufolep-level="{{ item[0] }}"
+                title="valeur ∈ [{{ item[1].value_range[0] }}, {{ item[1].value_range[1] }}]">
                 Max: {{ item[1].diff }} + {{ item[1].exec }} + 5.5 = {{ item[1].diff | plus: item[1].exec | plus: 5.5 }}
             </footer>
         </article>
-        {% endfor %}
     </div>
+    {% endfor %}
 </div>
 <article class="row g-2" data-colcade="columns: .col-12, items: article.card">
     <div class="col-12 d-none d-print-block" style="columns: 20rem; column-fill: auto;"></div>
