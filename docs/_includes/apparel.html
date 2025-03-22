@@ -13,7 +13,8 @@
             <header
                 class="card-header text-center bg-magma-{{ forloop.index0 | divided_by: num_levels | times: 12 | round }}-12-subtle position-relative">
                 <a class="stretched-link text-body text-decoration-none active" href="#"
-                    data-entanglement-name="{{ item[0] }}-toggle" title="Cliquez pour masquer les éléments">
+                    data-entanglement-name="{{ item[0] }}-toggle" title="Cliquez pour masquer les éléments"
+                    data-bs-toggle="tooltip">
                     <h3 class="mb-0">{{ item[0] }}</h3>
                 </a>
             </header>
@@ -27,7 +28,8 @@
             </ol>
 
             <footer class="card-footer text-end collapse show" data-ufolep-level="{{ item[0] }}"
-                title="valeur ∈ [{{ item[1].value_range[0] }}, {{ item[1].value_range[1] }}]">
+                title="valeur ∈ [{{ item[1].value_range[0] }}, {{ item[1].value_range[1] }}]"
+                data-bs-toggle="tooltip">
                 Max: {{ item[1].diff }} + {{ item[1].exec }} + 5.5 = {{ item[1].diff | plus: item[1].exec | plus: 5.5 }}
             </footer>
         </article>

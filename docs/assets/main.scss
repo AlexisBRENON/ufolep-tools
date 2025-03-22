@@ -88,7 +88,7 @@ $table-variants: map-merge($table-variants, map-loop($my-custom-colors, shift-co
 // @import "bootstrap/close";
 // @import "bootstrap/toasts";
 // @import "bootstrap/modal";
-// @import "bootstrap/tooltip";
+@import "bootstrap/tooltip";
 // @import "bootstrap/popover";
 // @import "bootstrap/carousel";
 // @import "bootstrap/spinners";
