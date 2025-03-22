@@ -27,11 +27,12 @@
                 {% endfor %}
             </ol>
 
-            <footer class="card-footer text-end collapse show" data-ufolep-level="{{ item[0] }}"
-                title="valeur ∈ [{{ item[1].value_range[0] }}, {{ item[1].value_range[1] }}]"
+            <div class="w-100" title="valeur ∈ [{{ item[1].value_range[0] }}, {{ item[1].value_range[1] }}]"
                 data-bs-toggle="tooltip">
+            <footer class="card-footer border-top-0 text-end collapse show" data-ufolep-level="{{ item[0] }}">
                 Max: {{ item[1].diff }} + {{ item[1].exec }} + 5.5 = {{ item[1].diff | plus: item[1].exec | plus: 5.5 }}
             </footer>
+            </div>
         </article>
     </div>
     {% endfor %}
