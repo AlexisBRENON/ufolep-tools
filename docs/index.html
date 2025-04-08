@@ -11,29 +11,30 @@ title: Brochure GAM
 </div>
 
 
-<div class="alert alert-secondary" role="alert">
-    <p class="d-print-none"> Conception et illustrations originale: www.acrostiche.com</p>
-    <p class="d-print-none"> Vous pouvez télécharger les données:
+<div class="alert alert-secondary d-print-none" role="alert">
+    <p> Conception et illustrations originale: www.acrostiche.com</p>
+    <p> Vous pouvez télécharger les données:
         <a href="{{ 'assets/db.json' | relative_url }}" target="_blank">db.json</a>.
     </p>
-    <p class="d-print-none">Cliquez sur le symbole d'un élément pour voir l'illustration.</p>
+    <p>Cliquez sur le symbole d'un élément pour voir l'illustration.</p>
     {% assign max_value = site.data.db.elements | map: "value" | sort | last | times: 10 | minus: 1 | round %}
-    <div class="row justify-content-start">
+    <p>Utilisez le menu déroulant de chaque élément pour choisir le text qui l'accompagne (texte de
+        référence, ou noms
+        courts)</p>
+    </div>
+    
+    <div class="row justify-content-start sticky-top">
         <label class="col-12 col-lg-auto col-form-label">Code couleur pour la valeur des éléments:</label>
         <div class="col">
             <div class="d-flex flex-row flex-wrap">
                 {% for i in (0..max_value) %}
                 {% assign variant_index = i | plus: 0.0 | divided_by: max_value | times: 12 | round %}
-                <div class="mx-1 my-1 my-lg-0 py-1 alert alert-magma-{{variant_index}}-12">
+                <div class="mx-1 my-1 my-lg-0 py-1 alert alert-magma-{{variant_index}}-12 bg-pattern bg-pattern-{{variant_index}}">
                     0,{{ i | plus: 1}}
                 </div>
                 {% endfor %}
-            </div>
         </div>
-    </div>
-    <p class="d-print-none">Utilisez le menu déroulant de chaque élément pour choisir le text qui l'accompagne (texte de
-        référence, ou noms
-        courts)</p>
+        </div>
 </div>
 
 

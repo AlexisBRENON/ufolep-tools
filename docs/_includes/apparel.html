@@ -8,10 +8,11 @@
 </div>
 <div class="row g-2 mb-3">
     {% for item in site.data.db['levels'] %}
+    {% assign level_color_index = forloop.index0 | divided_by: num_levels | times: 12 | round %}
     <div class="col-12 col-md-6 col-lg-4 col-xl-2">
         <article class="card mb-1">
             <header
-                class="card-header text-center bg-magma-{{ forloop.index0 | divided_by: num_levels | times: 12 | round }}-12-subtle position-relative">
+                class="card-header text-center bg-magma-{{ level_color_index }}-12-subtle position-relative">
                 <a class="stretched-link text-body text-decoration-none active" href="#"
                     data-entanglement-name="{{ item[0] }}-toggle" title="Cliquez pour masquer les éléments"
                     data-bs-toggle="tooltip">
@@ -19,9 +20,10 @@
                 </a>
             </header>
 
-            <ol class="list-group list-group-flush collapse show" type="I" data-ufolep-level="{{ item[0] }}">
+            <ol class="list-group list-group-numbered list-group-flush collapse show" type="I" data-ufolep-level="{{ item[0] }}">
                 {% for es in item[1].ES[include.apparel['name']] %}
-                <li class="list-group-item">
+                <li class="list-group-item {% if es contains '- Bonus' %}bg-magma-{{ level_color_index }}-12-subtle{%endif%}" {% if es
+                    contains '- Bonus' %}title="Bonus" data-bs-toggle="tooltip" {%endif%}>
                     {{ es | replace: '- Bonus', '' }}
                 </li>
                 {% endfor %}

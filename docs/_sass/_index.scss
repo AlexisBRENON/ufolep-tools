@@ -14,3 +14,18 @@
         }
     }
 }
+
+.list-group-numbered[type="I"] {
+    --list-group-numbered-style: upper-roman;
+}
+
+.list-group-numbered[type]>.list-group-item::before {
+    content: counters(section, ".", var(--list-group-numbered-style)) ". ";
+}
+
+
+.bg-pattern {
+    background-position: center;
+    background-size: contain;
+    background-blend-mode: overlay;
+}

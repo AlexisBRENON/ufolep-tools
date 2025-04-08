@@ -59,8 +59,6 @@ $tmp: (
 $utilities-bg-subtle: map-merge($utilities-bg-subtle, $tmp);
 $table-variants: map-merge($table-variants, map-loop($my-custom-colors, shift-color, "$value", $table-bg-scale));
 
-@debug $utilities-bg-subtle;
-
 // Layout & components
 @import "bootstrap/utilities";
 @import "bootstrap/root";
@@ -100,6 +98,7 @@ $table-variants: map-merge($table-variants, map-loop($my-custom-colors, shift-co
 @import "bootstrap/helpers";
 
 // Utilities
+@import "utilities";
 @import "bootstrap/utilities/api";
 // scss-docs-end import-stack
 
